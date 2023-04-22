@@ -1,0 +1,21 @@
+.home_container{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #00393C;
+    background-size: cover; 
+    
+}
+      
+.home_title{
+    font-size: 3rem;
+    font-family: Quicksand; 
+    margin-left: 1.2em;
+    color: #ffffff;
+}
+
+.bold_span{
+
+}
