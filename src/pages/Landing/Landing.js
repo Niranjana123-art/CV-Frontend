@@ -5,7 +5,7 @@ const Landing = () => {
   return (
     <div>
         <Navbar/>
-        <h1>Sona</h1>
+        
     </div>
   )
 }
