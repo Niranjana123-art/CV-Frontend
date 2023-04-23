@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Sevillana&display=swap');
 
 .Landing_container {
+    display: flex;
     justify-content: left;
     align-items: center;
     width: 100%;
@@ -10,7 +11,7 @@
     
 }
 .inner_contain{
-    margin-left: 1.2em;
+    margin-left: 4em;
     
 
 }
@@ -19,7 +20,7 @@
     font-size: 3rem;
     color:white;
     font-weight: 200;
-    margin-left: 1.2em;
+   
 }
 .bold_header{
     font-weight: bolder;   
@@ -37,4 +38,5 @@
     width: 14rem;
     padding:0.75rem;
     font-size: 31px;
+    padding-top: 3px;
 }
