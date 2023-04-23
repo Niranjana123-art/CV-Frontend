@@ -1,42 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Sevillana&display=swap');
-
-.Landing_container {
+.home_container{
     display: flex;
     justify-content: left;
     align-items: center;
     width: 100%;
     min-height: 100vh;
     background-color: #00393C;
-    background-size: cover;
+    background-size: cover; 
     
 }
-.inner_contain{
-    margin-left: 4em;
-    
-
-}
-.Landing_container h1{
-    font-family: QuickSand;
+      
+.home_title{
     font-size: 3rem;
-    color:white;
-    font-weight: 200;
-   
+    font-family: Quicksand; 
+    margin-left: 1.2em;
+    color: #ffffff;
 }
-.bold_header{
-    font-weight: bolder;   
 
-}
-.dim_header{
-    color:#706E6E;
-}
-.Landing_button{
-    border: none;
-    background:  #ffffff;
-    border-radius: 31px;
-    color: #000000;
-    height: 4rem;
-    width: 14rem;
-    padding:0.75rem;
-    font-size: 31px;
-    padding-top: 3px;
+.bold_span{
+
 }
