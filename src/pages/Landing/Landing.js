@@ -4,13 +4,13 @@ import './Landing.css'
 
 const Landing = () => {
   return (
-    <div className='Landing_container'>
+    <div className='landing__container'>
       <div>
         <h1 >Let</h1>
         <h1 className='bold_header'>Recruiters </h1>
         <h1 className='bold_header'>Find <span className='dim_header'>You</span>!</h1>
       </div>
-      <button className='Landing_button'>
+      <button className='landing__button'>
         Get Started
       </button>
     </div>
