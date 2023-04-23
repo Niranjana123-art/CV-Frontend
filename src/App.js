@@ -1,10 +1,11 @@
 import './App.css';
-import DetailAddTwo from './pages/DetailAddTwo/DetailAddTwo';
+import Login from './pages/Login/Login';
+
 
 function App() {
   return (
     <div className="App">
-      <DetailAddTwo/>
+      <Login/>
     </div>
   );
 }

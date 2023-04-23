@@ -1,17 +1,46 @@
-import React from 'react'
-import './Login.css'
 
+import React, { useState } from 'react';
+import './Login.css';
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  }
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  }
+
+  const handleConfirmPasswordChange = (event) => {
+    setConfirmPassword(event.target.value);
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    
+  }
   return (
-    <div className='Loginform_main'>
+    <div className="login-container">
+      <div className='Login_content'>
+      <h1>Login</h1>
+      <form onSubmit={handleSubmit}>
         
-        <form className='main_form'>
-            <input  className='su__input_taker' placeholder='email' 
-            type="text"  />
-            <input  className='su__input_taker' placeholder='password' 
-             type="password"  />
-        </form>
-           
+        <label htmlFor="email">Email:</label>
+        <input type="email" id="email" value={email} onChange={handleEmailChange} required />
+
+        <label htmlFor="password">Password:</label>
+        <input type="password" id="password" value={password} onChange={handlePasswordChange} required />
+        
+        
+        <button type="submit">Login</button>
+      </form>
+      <div className="login-link">
+        <p>Don’t have an account?  <a href="#">Sign Up</a></p>
+      </div>
+      </div>
     </div>
   )
 }

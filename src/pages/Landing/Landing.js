@@ -5,14 +5,16 @@ import './Landing.css'
 const Landing = () => {
   return (
     <div className='Landing_container'>
-      <div>
+      <div className='inner_contain'>
         <h1 >Let</h1>
         <h1 className='bold_header'>Recruiters </h1>
         <h1 className='bold_header'>Find <span className='dim_header'>You</span>!</h1>
-      </div>
+      
+
       <button className='Landing_button'>
         Get Started
       </button>
+      </div>
     </div>
   )
 }
