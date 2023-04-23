@@ -1,6 +1,26 @@
-.navbar_container{
-    color:brown;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Sevillana&display=swap');
+
+.navbar__container{
+    display: flex;
+    align-content: flex-start;
+    padding-left: 80rem;
+    justify-content: right;
+    background-color: #00393C;
+    padding: 2rem;
 }
-.navbar_container p{
-    font-size: 5rem;
+.navbar__container a{
+    font-family: QuickSand;
+    color:#FFFFFF;
+    font-size:18px;
+    text-decoration: none;
+}
+.navbar__container ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display:flex;
+    gap:3rem;
+}
+.navbar__container li:hover{
+    background-color:#01474d ;
 }
