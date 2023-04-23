@@ -2,6 +2,7 @@
 .landing__container {
     display: flex;
     align-content: flex-start;
+    align-items: flex-start;
     padding-left: 2rem;
     justify-content: center;
     width: 100%;
@@ -37,3 +38,7 @@
     transform: translateX(20%);
     cursor: pointer;
 }
+
+
+
+
