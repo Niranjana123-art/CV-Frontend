@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Sevillana&display=swap');
 .landing__container {
     display: flex;
-    /* align-items: center;  */
     align-content: flex-start;
     padding-left: 2rem;
     justify-content: center;
@@ -28,11 +27,12 @@
 .landing__button{
     border: none;
     background:  #ffffff;
-    border-radius: 22px;
+    border-radius: 68px;
+    margin-top: 2rem;
     color: #000000;
-    height: 6rem;
-    width: 17rem;
+    height: 4rem;
+    width: 15rem;
     padding:0.75rem;
-    font-size: 31px;
-    transform: translateX(10%);
+    font-size: 25px;
+    transform: translateX(20%);
 }

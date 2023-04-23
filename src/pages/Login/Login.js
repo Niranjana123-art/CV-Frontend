@@ -1,19 +1,41 @@
-import React from 'react'
+import React,{ useState } from 'react'
+// import { useNavigate } from "react-router-dom";
 import './Login.css'
 
 const Login = () => {
+  // const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const handleLogin = async (e) => {
+    e.preventDefault();
+  }
   return (
-    <div className='Loginform_main'>
-        
-        <form className='main_form'>
-            <input  className='su__input_taker' placeholder='email' 
-            type="text"  />
-            <input  className='su__input_taker' placeholder='password' 
-             type="password"  />
-        </form>
-           
+    <div className='login__container'>
+    <div className='login__content'>
+    <h1>Log In</h1>
+    <form onSubmit={handleLogin}>
+      <label>
+        Email:
+        <input type="text" value={email} onChange={(e) => {
+                setEmail(e.target.value);
+              }}/>
+      </label>
+      <br />
+      <label>
+        Password:
+        <input type="password" value={password} onChange={(e) => {
+                setPassword(e.target.value);
+              }} />
+      </label>
+      <br />
+      <button type="submit">Log In</button>
+    </form>
+    <div className='login__link'>
+      <p>Don't have an account?<a href='#'>Sign Up</a></p>
     </div>
-  )
+    </div> 
+  </div>
+  );
 }
 
-export default Login
+export default Login;
