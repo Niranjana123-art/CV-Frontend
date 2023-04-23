@@ -1,12 +1,12 @@
 import React from 'react'
-import Navbar from '../../components/Navbar/Navbar'
+//import Navbar from '../../components/Navbar/Navbar'
 
 const Landing = () => {
   return (
     <div>
-        <Navbar/>
-        Nandini
-    </div>
+        {/*<Navbar/>
+        Nandini*/}
+  </div>
   )
 }
 
