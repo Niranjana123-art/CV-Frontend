@@ -9,13 +9,13 @@
     min-height: 100vh;
     background: #00393C;
 }
-.login__container h1{
+h1{
     font-family: 'Poppins';
     font-style: normal;
     text-align:center;
     font-weight: 500;
     font-size: 50px;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     color: white;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
@@ -47,7 +47,7 @@ label{
     color:#ffffff;   
 }
 button{
-    font-size: 1.2rem;
+      font-size: 1.2rem;
       width: 12rem;
       height: 3.5rem;
       border-radius: 21px;

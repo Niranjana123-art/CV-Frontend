@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Sevillana&display=swap'); 
 .landing__container {
     display: flex;
     align-content: flex-start;
@@ -11,10 +11,10 @@
     flex-direction: column;
 }
 .landing__container h1{
-    font-family: QuickSand;
+    font-family: "Quicksand";
     font-size: 3rem;
     color:white;
-    font-weight: 200;
+    font-weight: 400;
     margin-left: 1.2em;
 }
 .bold_header{
@@ -35,4 +35,5 @@
     padding:0.75rem;
     font-size: 25px;
     transform: translateX(20%);
+    cursor: pointer;
 }
