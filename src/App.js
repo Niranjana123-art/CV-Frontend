@@ -13,8 +13,7 @@ import ResumeUploadSuccess from "./pages/ResumeUploadSuccess/ResumeUploadSuccess
 import DetailAdd from "./pages/DetailAdd/DetailAdd";
 import Profile from "./pages/Profile/Profile";
 import GenderSelection from "./components/GenderSelection/GenderSelection";
-import PersonalitySuccess from "./components/PersonalitySuccess/PersonalitySuccess";
-import DetailAddTwo from "./pages/DetailAddTwo/DetailAddTwo";
+
 
 function App() {
   return (
