@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import Landing from "./pages/Landing/Landing";
 import Login from "./pages/Login/Login";
-import PersonalitySuccess from "./pages/PersonalitySuccess/PersonalitySuccess";
+import PersonalitySuccess from "./components/PersonalitySuccess/PersonalitySuccess";
 
 function App() {
   return (

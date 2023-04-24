@@ -9,7 +9,7 @@ const PersonalitySuccess = () => {
              <p>Personality Test Submitted Successfully!</p>
            </div>
              <div>
-             <button className='button'>Attend Aptitude Test</button>
+             <button className='PersonalitySuccess_button'>Attend Aptitude Test</button>
              </div>
       </div>
     </div>
