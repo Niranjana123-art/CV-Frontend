@@ -31,7 +31,8 @@ const DetailAddTwo = () => {
                 <h3>Upload Resume</h3></div>
 
                 <div className='UploadResume_content'>
-                  <button className ='Button_UploadResume' type='UploadResume'>+ Upload Resume</button>
+                <input type="file" id="files" class="hidden"/>
+
                   <button className ='Button_Submit' type='Submit'> SUBMIT</button>
                 </div>
 

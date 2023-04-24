@@ -12,10 +12,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
-<<<<<<< HEAD
-    "react-router-hash-link": "^2.4.3",
-=======
->>>>>>> 8bfbf30f15924e7dcb038ef965c25d7ac8a93408
     "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.9",
     "web-vitals": "^2.1.4"

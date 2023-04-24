@@ -38,6 +38,7 @@
   cursor: pointer;
 }
 .navbar__link {
+  padding-top: 2rem;
   font-size: 1.2rem;
   font-weight: 500;
   color: #f9f6ed;
@@ -45,12 +46,18 @@
   font-family: var(--tertiary-font);
 }
 .navbar__logo {
+  margin-left: 5rem;
+  padding-top: 2rem;
+  padding-left: 5rem;
+  background: no-repeat;
   font-size: 2rem;
   font-weight: 500;
   color: #f9f6ed;
   text-decoration: none;
   font-family: var(--tertiary-font);
-  background-image: ;
+  background-image: url('../../assets/logo.png');
+  background-size: 120px 120px;
+  background-position: -2rem -18px;
 }
 .login_btn {
   background-color: #0073b6;

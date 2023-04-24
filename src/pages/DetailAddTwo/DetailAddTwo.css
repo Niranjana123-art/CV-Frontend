@@ -6,14 +6,16 @@
     background: linear-gradient(129.93deg, #55AEC0 0.09%, #003D3E 0.1%, #003339 21.43%, #1F2221 68.35%);
     width: 100vw;
     min-height: 100vh;
+    /* position: fixed; */
 }
 .DetailAddTwo_Box{
-    padding-top: 6rem;
+    margin-top: 3rem;
+    padding-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80.75rem;
-    height: 35.125rem;
+    width: 67.75rem;
+    height: 33.75rem;
     background: rgba(124, 124, 124, 0.75);
     border-radius: 55px;
 }
@@ -92,6 +94,6 @@ form {
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
-    line-height: 30px;
+    text-align: center;
     color: #FFFFFF;
 }

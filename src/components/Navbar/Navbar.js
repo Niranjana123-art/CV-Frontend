@@ -51,7 +51,8 @@ function Navbar() {
             onClick={() => {
               // router.push("/");
             }}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer"
+                    }}
           >
            
             CV Analysis
@@ -260,8 +261,4 @@ function Navbar() {
   );
 }
 
-<<<<<<< HEAD
-export default Navbar;
-=======
 export default Navbar
->>>>>>> 8bfbf30f15924e7dcb038ef965c25d7ac8a93408
