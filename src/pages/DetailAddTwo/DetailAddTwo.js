@@ -1,5 +1,8 @@
 import React  from 'react';
 import './DetailAddTwo.css';
+import {FaPhoneSquareAlt} from "react-icons/fa"
+import {FaEnvelope} from "react-icons/fa"
+import {FaLinkedin} from "react-icons/fa"
 
 
 const DetailAddTwo = () => {
@@ -17,9 +20,9 @@ const DetailAddTwo = () => {
 
               <div className='Additonal_info_content'>
               <form>
-                 <label>Phone No:<input type='PhoneNo'/></label>
-                 <label>E-mail Id: <input type='EmailId'/></label>
-                 <label>LinkedIn Profile:<input type='LinkedIn'/></label>
+                 <label><FaPhoneSquareAlt size={30} color='black'/>Phone No:<input type='PhoneNo'/></label>
+                 <label><FaEnvelope size={30} color='black'/>E-mail Id: <input type='EmailId'/></label>
+                 <label><FaLinkedin size={30}  color='black'/>LinkedIn Profile:<input type='LinkedIn'/></label>
               </form>
               </div>
 
