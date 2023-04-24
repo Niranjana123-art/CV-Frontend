@@ -5,6 +5,8 @@ import './App.css';
 
 import Landing from "./pages/Landing/Landing";
 import Login from "./pages/Login/Login";
+import DetailAddTwo from "./pages/DetailAddTwo/DetailAddTwo";
+import PersonalitySuccess from "./components/PersonalitySuccess/PersonalitySuccess";
 import SignUp from "./pages/SignUp/SignUp";
 import AptitudeScore from "./pages/AptitudeScore/AptitudeScore";
 import ResumeUploadSuccess from "./pages/ResumeUploadSuccess/ResumeUploadSuccess";
@@ -24,6 +26,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/PersonalitySuccess" element={<PersonalitySuccess/>} />
+            <Route path="/AptitudeScore" element={<AptitudeScore/>} />
             <Route path="/resume-upload" element={<ResumeUploadSuccess />} />
             <Route path="/detail-add1" element={<DetailAdd />} />
             <Route path="/detail-add2" element={<DetailAddTwo />} />
