@@ -1,0 +1,52 @@
+.AptitudeScore_Container{
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(129.93deg, #55AEC0 0.09%, #003D3E 0.1%, #003339 21.43%, #1F2221 68.35%);
+    width: 100vw;
+    min-height: 100vh;
+}
+.AptitudeScore_Box{
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80.75rem;
+    height: 35.125rem;
+    background: rgba(124, 124, 124, 0.75);
+    border-radius: 55px;
+}
+.AptitudeScore_Header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.AptitudeScore_CandidateDetails{
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.AptitudeScore_CandidateScore{
+    padding-top: 2rem;
+}
+.AptitudeScore_Button{
+    padding-top: 2rem;
+}
+.AptitudeScore_Button button{
+    background:#003A3C;;
+    border-radius: 14px;
+    width: 127px;
+    height: 51px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.AptitudeScore_Button button:hover{
+    background:#065658;
+}
