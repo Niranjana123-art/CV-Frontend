@@ -31,7 +31,7 @@
     color: #000000;
 }
 .PersonalitySuccess_button{
-    width: 15rem;
+    width: 20rem;
     height: 3rem;
     background: #5B5B5B;
     font-family: 'Inter';
@@ -41,10 +41,6 @@
     text-align: center;
     color: #FFFFFF;
 }
-<<<<<<< HEAD:src/components/PersonalitySuccess/PersonalitySuccess.css
 .PersonalitySuccess_button:hover {
-=======
-.button button:hover {
->>>>>>> a548e8200de549065e1802dc7a980d2209370369:src/pages/PersonalitySuccess/PersonalitySuccess.css
     background-color: #706e6e;
   }
