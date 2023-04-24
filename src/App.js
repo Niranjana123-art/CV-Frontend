@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import Landing from "./pages/Landing/Landing";
 import Login from "./pages/Login/Login";
-import PersonalitySuccess from "./pages/PersonalitySuccess/PersonalitySuccess";
 import SignUp from "./pages/SignUp/SignUp";
 import ResumeUploadSuccess from "./pages/ResumeUploadSuccess/ResumeUploadSuccess";
 import DetailAdd from "./pages/DetailAdd/DetailAdd";
@@ -18,7 +17,6 @@ function App() {
             <Route path="/" element={<Landing />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
-            <Route path="/PersonalitySuccess" element={<PersonalitySuccess/>} />
             <Route path="/resume-upload" element={<ResumeUploadSuccess />} />
             <Route path="/detail-add1" element={<DetailAdd />} />
             <Route path="/rough" element={<GenderSelection />} />
