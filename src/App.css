@@ -3,3 +3,9 @@
     padding: 0px;
    
 }
+.App{
+    overflow: hidden;
+    min-height: 100vh;
+    max-width: 100vw;
+    background: #1C3848;
+  }
