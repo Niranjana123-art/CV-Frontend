@@ -38,7 +38,7 @@ function GenderSelection() {
           id="other"
           name="gender"
           value="other"
-          checked={selectedGender === 'male'}
+          checked={selectedGender === 'other'}
           onChange={handleGenderChange}
         />
         <label htmlFor="other">Other</label>
