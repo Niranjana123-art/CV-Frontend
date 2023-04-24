@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #002F32;
+    background: linear-gradient(129.93deg, #55AEC0 0.09%, #003D3E 0.1%, #003339 21.43%, #1F2221 68.35%);
     width: 100vw;
     min-height: 100vh;
 }
@@ -78,7 +78,7 @@ form {
 .Button_UploadResume{
     box-sizing: border-box;
     border: 2px solid #E2F8FB;
-    width: 149px;
+    width: 200px;
     height: 39px;
     border-radius: 5px;
     background: rgba(124, 124, 124, 0.75);

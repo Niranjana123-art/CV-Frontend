@@ -1,9 +1,12 @@
 import React from 'react'
-import './Landing.css'
 // import Navbar from '../../components/Navbar/Navbar'
+import './Landing.css'
+
 
 const Landing = () => {
   return (
+    <>
+     {/* <Navbar/> */}
     <div className='landing__container'>
       <div>
         <h1 >Let</h1>
@@ -14,6 +17,7 @@ const Landing = () => {
         Get Started
       </button>
     </div>
+    </>
   )
 }
 

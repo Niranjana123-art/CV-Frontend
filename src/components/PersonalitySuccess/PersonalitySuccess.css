@@ -30,8 +30,8 @@
     text-align: center;
     color: #000000;
 }
-.button{
-    width: 15rem;
+.PersonalitySuccess_button{
+    width: 20rem;
     height: 3rem;
     background: #5B5B5B;
     font-family: 'Inter';
@@ -41,7 +41,6 @@
     text-align: center;
     color: #FFFFFF;
 }
-button:hover {
+.PersonalitySuccess_button:hover {
     background-color: #706e6e;
-   
   }
