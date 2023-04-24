@@ -5,13 +5,14 @@ import './App.css';
 
 import Landing from "./pages/Landing/Landing";
 import Login from "./pages/Login/Login";
-import PersonalitySuccess from "./pages/PersonalitySuccess/PersonalitySuccess";
 import SignUp from "./pages/SignUp/SignUp";
 import AptitudeScore from "./pages/AptitudeScore/AptitudeScore";
 import ResumeUploadSuccess from "./pages/ResumeUploadSuccess/ResumeUploadSuccess";
 import DetailAdd from "./pages/DetailAdd/DetailAdd";
 import Profile from "./pages/Profile/Profile";
 import GenderSelection from "./components/GenderSelection/GenderSelection";
+import PersonalitySuccess from "./components/PersonalitySuccess/PersonalitySuccess";
+import DetailAddTwo from "./pages/DetailAddTwo/DetailAddTwo";
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
             <Route path="/detail-add2" element={<DetailAddTwo />} />
             <Route path="/rough" element={<GenderSelection />} />
             <Route path="/Profile" element={<Profile />} />
+            <Route path="/AptitudeScore" element={<AptitudeScore />} />
+
 
       </Routes>
       </BrowserRouter>
