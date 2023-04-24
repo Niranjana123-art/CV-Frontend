@@ -1,4 +1,4 @@
-.PersonalitySuccess_Container{
+.AptitudeSuccess_Container{
     padding-top: 8.125rem;
     display: flex;
     align-items: center;
@@ -7,13 +7,13 @@
     width: 100vw;
     min-height: 100vh;
 }
-.PersonalitySuccess_Text{
+.AptitudeSuccess_Text{
     width: 25rem;
     height: 6rem;
     text-align: center;
 }
 
-.PersonalitySuccess_Content{
+.AptitudeSuccess_Content{
     padding-top: 6.25rem;
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
     min-height: 50vh;
     background: #D9D9D9;
 }
-.PersonalitySuccess_Text p{
+.AptitudeSuccess_Text p{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -30,7 +30,7 @@
     text-align: center;
     color: #000000;
 }
-.button{
+.AptitudeSuccess_button{
     width: 15rem;
     height: 3rem;
     background: #5B5B5B;
@@ -41,6 +41,7 @@
     text-align: center;
     color: #FFFFFF;
 }
-.button button:hover {
+.AptitudeSuccess_button:hover {
     background-color: #706e6e;
+   
   }
