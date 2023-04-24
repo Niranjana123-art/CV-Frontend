@@ -23,7 +23,7 @@ const SignUp = () => {
     // Code to submit form data goes here
   }
   return (
-    <div className="login-container">
+    <div className="SignUp_container">
     {/*<div >
       <div className='SignUp_container'>
         <div className='SignUp_title'>Sign Up</div>
@@ -61,7 +61,7 @@ const SignUp = () => {
 
     <button type="submit">Sign up</button>
   </form>
-  <div className="login-link">
+  <div className="SignUp_link">
     <p>Already have an account? <a href="#">Log in here</a></p>
   </div>
   </div>

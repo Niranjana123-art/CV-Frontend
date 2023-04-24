@@ -10,7 +10,7 @@
 border-radius: 55px;
 }
 
-.login-container {
+.SignUp_container {
     padding-top: 5rem;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@ border-radius: 55px;
     min-height: 100vh;
   }
   
-  h1 {
+  .SignUp_content h1 {
     font-family: 'Poppins';
     font-style: normal;
     text-align:center;
@@ -74,7 +74,7 @@ border-radius: 55px;
    
   }
   
-  .login-link {
+  .SignUp_link {
     margin-top: 1rem;
     font-size: 1rem;
     color: white;
@@ -84,12 +84,12 @@ border-radius: 55px;
     text-align: center;
   }
   
-  .login-link a {
+  .SignUp-link a {
     color: #4AA9BC;
     text-decoration:solid;
     
   }
   
-  .login-link a:hover {
+  .SignUp-link a:hover {
     text-decoration: underline;
   }
