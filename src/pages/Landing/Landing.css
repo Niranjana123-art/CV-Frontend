@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Sevillana&display=swap'); 
 .landing__container {
     display: flex;
+    position: fixed;
     align-content: center;
     flex-direction: column;
     padding-left: 2rem;
@@ -9,6 +10,7 @@
     min-height: 100vh;
     background-color: #00393C;
     background-size: cover;
+   
 }
 .landing__container h1{
     font-family: "Quicksand";
