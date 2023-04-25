@@ -11,6 +11,7 @@ import ResumeUploadSuccess from "./pages/ResumeUploadSuccess/ResumeUploadSuccess
 import DetailAdd from "./pages/DetailAdd/DetailAdd";
 import Profile from "./pages/Profile/Profile";
 import GenderSelection from "./components/GenderSelection/GenderSelection";
+import PersonalityScore from "./pages/PersonalityScore/PersonalityScore";
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
             <Route path="/detail-add2" element={<DetailAddTwo />} />
             <Route path="/rough" element={<GenderSelection />} />
             <Route path="/Profile" element={<Profile />} />
-
+            <Route path="/personality-score" element={<PersonalityScore />} />
+            <Route path="/aptitude-score" element={<AptitudeScore />} />
       </Routes>
       </BrowserRouter>
       </div>

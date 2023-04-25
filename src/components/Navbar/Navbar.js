@@ -51,7 +51,8 @@ function Navbar() {
             onClick={() => {
               // router.push("/");
             }}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer"
+                    }}
           >
            
             CV Analysis

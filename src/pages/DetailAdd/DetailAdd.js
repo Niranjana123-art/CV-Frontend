@@ -37,8 +37,6 @@ const DetailAdd = () => {
                 required
                 />
                 </label>
-    
-
                 <label htmlFor="dob"><FaCalendarAlt/> D.O.B:
                 <input
                 type="date"

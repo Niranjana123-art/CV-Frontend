@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@300&family=Quicksand&family=Sevillana&display=swap');
+.personality-score__container{
+    display: flex;
+    /* align-content: center; */
+    align-items:center;
+    flex-direction: column;
+    justify-content:center;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 1rem;
+    background: linear-gradient(129.93deg, #55AEC0 0.09%, #003D3E 0.1%, #003339 21.43%, #1F2221 68.35%);
+}
+.personality-score__container h1{
+    font-family: 'Poppins';
+    font-size:28px;
+    font-weight: 500;
+    color:white;
+    margin-right: 72rem;
+}
+.score__contents{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    padding-top: 2rem;
+    width: 80rem;
+    height: 36rem;
+    background: rgba(124, 124, 124, 0.75);
+    backdrop-filter: blur(2px);
+    border-radius: 3.4rem;
+}
+.quote__content{
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 16px;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color:black;
+}
+.detail__contents{
+    font-family: 'Poppins';
+    font-weight: bolder;
+    font-size: 16px;
+    margin-top: 1rem;
+}
+.location__content{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    margin-bottom: 1rem;
+}
+.PersonalityTest__score{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 3rem;
+}
+.score__contents button{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #003A3C;
+}
