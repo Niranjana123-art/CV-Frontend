@@ -12,6 +12,8 @@ import DetailAdd from "./pages/DetailAdd/DetailAdd";
 import Profile from "./pages/Profile/Profile";
 import GenderSelection from "./components/GenderSelection/GenderSelection";
 import PersonalityScore from "./pages/PersonalityScore/PersonalityScore";
+import PersonalitySuccess from "./components/PersonalitySuccess/PersonalitySuccess";
+import DetailAddTwo from "./pages/DetailAddTwo/DetailAddTwo";
 
 function App() {
   return (

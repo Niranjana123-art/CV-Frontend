@@ -24,47 +24,25 @@ const SignUp = () => {
   }
   return (
     <div className="SignUp_container">
-    {/*<div >
-      <div className='SignUp_container'>
-        <div className='SignUp_title'>Sign Up</div>
+   
+          <div className='SignUp_content'>
+                <h1>Sign up</h1>
+                <form onSubmit={handleSubmit}>
+                        <label htmlFor="email">Email:</label>
+                        <input type="email" id="email" value={email} onChange={handleEmailChange} required />
 
-        <div className='SignUp_details'>
-            <div className='SignUp_email'></div>
-            <div className='SignUp_password'></div>
-            <div className='SignUp_confirm_password'></div>
+                        <label htmlFor="password">Password:</label>
+                        <input type="password" id="password" value={password} onChange={handlePasswordChange} required />
 
+                        <label htmlFor="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" value={confirmPassword} onChange={handleConfirmPasswordChange} required />
 
-        </div>
-        <div className='SignUp_button'>
-            <button>
-            </button>
-        </div>
-        <div className='SignUp_login'>
-           <div className='SignUp_already_account'></div>
-           <div className='SignUp_already_login'></div>
-        </div>
-
-
-      </div>
-  </div> */}
-  <div className='SignUp_content'>
-  <h1>Sign up</h1>
-  <form onSubmit={handleSubmit}>
-    <label htmlFor="email">Email:</label>
-    <input type="email" id="email" value={email} onChange={handleEmailChange} required />
-
-    <label htmlFor="password">Password:</label>
-    <input type="password" id="password" value={password} onChange={handlePasswordChange} required />
-
-    <label htmlFor="confirm-password">Confirm Password:</label>
-    <input type="password" id="confirm-password" value={confirmPassword} onChange={handleConfirmPasswordChange} required />
-
-    <button type="submit">Sign up</button>
-  </form>
-  <div className="SignUp_link">
-    <p>Already have an account? <a href="#">Log in here</a></p>
-  </div>
-  </div>
+                        <button type="submit">Sign up</button>
+                </form>
+                <div className="SignUp_link">
+                   <p>Already have an account? <a href="#">Log in here</a></p>
+                </div>
+          </div>
 </div>
   )
 }
