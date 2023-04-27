@@ -20,7 +20,7 @@ const DetailAdd = () => {
   return (
     <div className='detail_add__container'>
         <div className='detail_add__contents'>
-        <FaVenus size={50} color='#4AA9BC'/>
+        <FaVenus size='50' color='#4AA9BC'/>
             <div className='quote__content'>
             <p>You're about to start exploring, so</p>
             <p><span className='next__line'>tell about yourself!</span></p>
@@ -28,6 +28,7 @@ const DetailAdd = () => {
             <div className='input__contents'>
             <>
             <form onSubmit={handleSubmit}>
+            <hr/>
                 <label htmlFor="name"><FaUserAlt/> Name:
                 <input
                 type="text"
@@ -37,6 +38,7 @@ const DetailAdd = () => {
                 required
                 />
                 </label>
+                <hr/>
                 <label htmlFor="dob"><FaCalendarAlt/> D.O.B:
                 <input
                 type="date"
@@ -45,6 +47,7 @@ const DetailAdd = () => {
                 onChange={(event) => setDob(event.target.value)}
                 required
                  />
+                 <hr/>
                 </label>
                 <label htmlFor="location"><FaMapMarkerAlt/> Location:
                 <input
@@ -55,6 +58,7 @@ const DetailAdd = () => {
                 required
                 />
                 </label>
+                <hr/>
             </form>
             </>
             <div>

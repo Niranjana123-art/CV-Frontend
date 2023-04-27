@@ -5,6 +5,7 @@
     align-content: center;
     justify-content: center;
     background-size: cover;
+    padding-top: 3rem;
   }
   
   .gender-selection-wrapper p {
@@ -12,7 +13,7 @@
     font-size: 1.5rem;
     width: 30rem;
     padding: 5px;
-    border-radius: 20px;
+    border-radius: 13px;
     margin-bottom: 10px;
     /* margin-left: 16rem; */
     text-align: center;
@@ -24,6 +25,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    padding-top: 1rem;
   }
   
   input[type='checkbox'] {
@@ -31,7 +33,7 @@
     width: 20px;
     height: 20px;
     border-radius: 3px;
-    border: 1px solid #ccc;
+    border: 1px solid #211f1f;
     outline: none;
     margin-right: 10px;
     margin-left: 12rem;

@@ -13,7 +13,7 @@ import Profile from "./pages/Profile/Profile";
 import GenderSelection from "./components/GenderSelection/GenderSelection";
 import PersonalityScore from "./pages/PersonalityScore/PersonalityScore";
 import PersonalitySuccess from "./components/PersonalitySuccess/PersonalitySuccess";
-import DetailAddTwo from "./pages/DetailAddTwo/DetailAddTwo";
+import Rating from "./components/Rating/Rating";
 
 function App() {
   return (
@@ -25,12 +25,14 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/resume-upload" element={<ResumeUploadSuccess />} />
+            <Route path="/PersonalitySuccess" element={<PersonalitySuccess />} />
             <Route path="/detail-add1" element={<DetailAdd />} />
             <Route path="/detail-add2" element={<DetailAddTwo />} />
             <Route path="/rough" element={<GenderSelection />} />
             <Route path="/Profile" element={<Profile />} />
             <Route path="/personality-score" element={<PersonalityScore />} />
             <Route path="/aptitude-score" element={<AptitudeScore />} />
+            <Route path="/rating" element={<Rating />} />
       </Routes>
       </BrowserRouter>
       </div>

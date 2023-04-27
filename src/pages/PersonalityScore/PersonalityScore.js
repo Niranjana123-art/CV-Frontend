@@ -2,17 +2,18 @@ import React from 'react'
 import './PersonalityScore.css'
 import {FaBookOpen} from "react-icons/fa";
 import {FaUserCircle} from "react-icons/fa";
+import Rating from '../../components/Rating/Rating';
 
 const PersonalityScore = () => {
   return (
     <div className='personality-score__container'>
-            <h1>Personality Test Score</h1>
+            <div className='heading__content'><h1>Personality Test Score</h1></div>
             <div className='score__contents'>
-                <FaBookOpen border='black' color='white' size='30px'/>
-                <p className='quote__content'>What we received from you</p>
+                <FaBookOpen border='black' color='white' size='2.1rem'/>
+                <p className='line__content'>What we received from you</p>
                 <FaUserCircle size='4rem' color='#1d222b' />
                 <div className='detail__contents'>
-                    <p>Nandini P</p>
+                    <p>Niranjana B Nair</p>
                     <p className='location__content'>Kerala,India</p>
                 </div>
                 <div className='PersonalityTest__score'>
@@ -24,11 +25,13 @@ const PersonalityScore = () => {
                         height: '1px',
                         width: '400px',
                         opacity:'0.2',
-                        marginBottom:'6px',
-                        marginTop:'6px',
+                        marginBottom:'10px',
+                        marginTop:'10px',
                         }}
                      />
-                <h2>Openness</h2>
+                <h2>Openness
+                  <Rating/>
+                  </h2>
                      <hr
                         style={{
                         background: 'black',
@@ -37,11 +40,13 @@ const PersonalityScore = () => {
                         height: '1px',
                         width: '400px',
                         opacity:'0.2',
-                        marginBottom:'6px',
-                        marginTop:'6px',
+                        marginBottom:'10px',
+                        marginTop:'10px',
                         }}
                      />
-                     <h2>Conscientiousness</h2>
+                     
+                     <h2>Conscientiousness <Rating/></h2>
+                     
                      <hr
                         style={{
                         background: 'black',
@@ -50,11 +55,13 @@ const PersonalityScore = () => {
                         height: '1px',
                         width: '400px',
                         opacity:'0.2',
-                        marginBottom:'6px',
-                        marginTop:'6px',
+                        marginBottom:'10px',
+                        marginTop:'10px',
                         }}
                      />
-                     <h2>Extraversion</h2>
+                     
+                     <h2>Extraversion <Rating/></h2>
+                    
                      <hr
                         style={{
                         background: 'black',
@@ -63,11 +70,13 @@ const PersonalityScore = () => {
                         height: '1px',
                         width: '400px',
                         opacity:'0.2',
-                        marginBottom:'6px',
-                        marginTop:'6px',
+                        marginBottom:'10px',
+                        marginTop:'10px',
                         }}
                      />
-                     <h2>Agreeableness</h2>
+                     
+                     <h2>Agreeableness <Rating/></h2>
+                     
                      <hr
                         style={{
                         background: 'black',
@@ -76,11 +85,13 @@ const PersonalityScore = () => {
                         height: '1px',
                         width: '400px',
                         opacity:'0.2',
-                        marginBottom:'6px',
-                        marginTop:'6px',
+                        marginBottom:'10px',
+                        marginTop:'10px',
                         }}
                      />
-                     <h2>Neuroticism</h2>
+                     
+                     <h2>Neuroticism <Rating/></h2>
+                     
                      <hr
                         style={{
                         background: 'black',
@@ -89,8 +100,8 @@ const PersonalityScore = () => {
                         height: '1px',
                         width: '400px',
                         opacity:'0.2',
-                        marginBottom:'6px',
-                        marginTop:'6px',
+                        marginBottom:'10px',
+                        marginTop:'10px',
                         }}
                      />
                 </div>
