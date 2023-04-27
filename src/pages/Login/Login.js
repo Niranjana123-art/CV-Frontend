@@ -24,7 +24,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className='Login_content'>
-      <h1>Login</h1>
+      <h1>Log In</h1>
       <form onSubmit={handleSubmit}>
         
         <label htmlFor="email">Email:</label>
@@ -34,7 +34,7 @@ const Login = () => {
         <input type="password" id="password" value={password} onChange={handlePasswordChange} required />
         
         
-        <button type="submit">Login</button>
+        <button type="submit">Log In</button>
       </form>
       <div className="login-link">
         <p>Don’t have an account?  <a href="#">Sign Up</a></p>
