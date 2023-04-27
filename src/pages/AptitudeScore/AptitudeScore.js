@@ -13,8 +13,8 @@ const AptitudeScore = () => {
                 </div>
                 <div className='AptitudeScore_CandidateDetails'>
                     <FaAddressCard size={100}/>
-                    <h1>Niranjana B Nair</h1>
-                    <h2>Kerala,India</h2>
+                    <h1>Candidate Name</h1>
+                    <h2>City,State</h2>
                 </div>
                 <div className='AptitudeScore_CandidateScore'>
                 <h2>Maths</h2>
