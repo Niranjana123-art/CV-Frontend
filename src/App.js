@@ -19,8 +19,9 @@ import PersonalitySuccess from "./components/PersonalitySuccess/PersonalitySucce
 function App() {
   return (
     <div className="App">
-    <Navbar/>
+  
     <BrowserRouter>
+    <Navbar/>
        <Routes>    
             <Route path="/" element={<Landing />} />
             <Route path="/login" element={<Login />} />

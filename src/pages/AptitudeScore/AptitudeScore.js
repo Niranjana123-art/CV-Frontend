@@ -1,14 +1,15 @@
 import React from 'react'
 import "./AptitudeScore.css"
-import {FaBookOpen} from "react-icons/fa";
+import {FiBookOpen} from "react-icons/fi";
 import {FaAddressCard} from "react-icons/fa";
+import {BsPersonCircle} from "react-icons/bs";
 
 const AptitudeScore = () => {
   return (
     <div className='AptitudeScore_Container'>
             <div className='AptitudeScore_Box'>
                 <div className='AptitudeScore_Header'>
-                   <FaBookOpen size={50}/>
+                   <FiBookOpen size={50}/>
                    <h2>What We Received From You</h2>
                 </div>
                 <div className='AptitudeScore_CandidateDetails'>
