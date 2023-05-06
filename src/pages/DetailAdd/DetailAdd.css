@@ -15,7 +15,8 @@
     flex-direction: column;
     padding-top: 3rem;
     width: 65rem;
-    height: 47rem;
+    height: 42rem;
+    margin-top: 9rem;
     background: rgba(124, 124, 124, 0.75);
     backdrop-filter: blur(2px);
     border-radius: 3rem;
@@ -24,7 +25,7 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
-    font-size: 30px;
+    font-size: 25px;
     color:#ffffff;
     text-align: center;
 }
@@ -61,7 +62,7 @@
       color: white;
       cursor: pointer;
       transition: all 0.2s ease-in-out;
-      margin-top: 2rem;
+   
 }
 /* .input__contents label{
     text-decoration: underline;
