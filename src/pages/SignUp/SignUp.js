@@ -1,26 +1,31 @@
 
 import React, { useState } from 'react';
 import './SignUp.css';
+import axios from 'axios';
+import { baseUrl } from '../../utils/Urls';
+import { useNavigate } from 'react-router-dom';
+import CustomTitle from '../../utils/CustomTitle';
+
+
 const SignUp = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  }
-
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  }
-
-  const handleConfirmPasswordChange = (event) => {
-    setConfirmPassword(event.target.value);
-  }
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Code to submit form data goes here
+  const[email,setEmail]=useState('')
+  const[username,setUsername]=useState('');
+  const[password,setPassword]=useState('')
+  const navigate=useNavigate();
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+    axios.post(`${baseUrl}/register/`,{
+      email:email,
+      username:username,
+      password:password,
+    }).then(response=>{
+      console.log(response)
+      if(response.status===201){
+        navigate('/login')
+      }
+    },error=>{
+      console.log(error)
+    })
   }
   return (
     <div className="SignUp_container">
@@ -29,13 +34,13 @@ const SignUp = () => {
                 <h1>Sign up</h1>
                 <form onSubmit={handleSubmit}>
                         <label htmlFor="email">Email:</label>
-                        <input type="email" id="email" value={email} onChange={handleEmailChange} required />
+                        <input type="email" id="email" value={email} onChange={(e)=>{setEmail(e.target.value)}} />
 
-                        <label htmlFor="password">Password:</label>
-                        <input type="password" id="password" value={password} onChange={handlePasswordChange} required />
+                        <label htmlFor="username">Username:</label>
+                        <input type="text" id="username" value={username} onChange={(e)=>{setUsername(e.target.value)}} />
 
-                        <label htmlFor="confirm-password">Confirm Password:</label>
-                        <input type="password" id="confirm-password" value={confirmPassword} onChange={handleConfirmPasswordChange} required />
+                        <label htmlFor="confirm-password">Password:</label>
+                        <input type="password" id="confirm-password" value={password} onChange={(e)=>{setPassword(e.target.value)}} />
 
                         <button type="submit">Sign up</button>
                 </form>

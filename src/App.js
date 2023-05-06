@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+// import axiosInstance from "./auth/authHandler";
+// import { baseUrl } from "./utils/Urls";
 import './App.css';
 import DetailAddTwo from "./pages/DetailAddTwo/DetailAddTwo"
 import Landing from "./pages/Landing/Landing";
@@ -13,7 +14,7 @@ import Profile from "./pages/Profile/Profile";
 import GenderSelection from "./components/GenderSelection/GenderSelection";
 import PersonalityScore from "./pages/PersonalityScore/PersonalityScore";
 import PersonalitySuccess from "./components/PersonalitySuccess/PersonalitySuccess";
-import Rating from "./components/Rating/Rating";
+
 
 function App() {
   return (
@@ -32,7 +33,6 @@ function App() {
             <Route path="/Profile" element={<Profile />} />
             <Route path="/personality-score" element={<PersonalityScore />} />
             <Route path="/aptitude-score" element={<AptitudeScore />} />
-            <Route path="/rating" element={<Rating />} />
       </Routes>
       </BrowserRouter>
       </div>

@@ -12,7 +12,7 @@ import "@szhsin/react-menu/dist/transitions/slide.css";
 
 function Navbar() {
   // const router = useRouter();
-  const [open, setOpen] = useState(false);
+
   // const [open1, setOpen1] = React.useState(false);
 
   // const handleClickOpen1 = () => {
@@ -24,9 +24,9 @@ function Navbar() {
   // };
   // const { profile, signOutOfGoogle, signInWithGoogle } =
     // useContext(UserContext);
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
+  // const handleDrawerClose = () => {
+  //   setOpen(false);
+  // };
 
   return (
     <>
@@ -35,15 +35,15 @@ function Navbar() {
         <div className={"navbar__left"}>
           <div
             className={"navbar__menu_container"}
-            onClick={() => {
-              setOpen(true);
-            }}
+            // onClick={() => {
+            //   setOpen(true);
+            // }}
           >
             <HiMenuAlt2
               className={"navbar__menu"}
-              onClick={() => {
-                setOpen(true);
-              }}
+              // onClick={() => {
+              //   setOpen(true);
+              // }}
             />
           </div>
           <div
@@ -53,7 +53,7 @@ function Navbar() {
             }}
             style={{ cursor: "pointer"
                     }}
-          >
+            >
            
             CV Analysis
           </div>
@@ -61,11 +61,13 @@ function Navbar() {
         <div className={"navbar__links"}>
           <div
             className={"navbar__link"}
-            onClick={() => {
-              // router.push("/");
-            }}
+            // onClick={() => {
+            //   // router.push("/");
+            // }}
           >
+            
             Home
+          
           </div>
           <div
             className={"navbar__link"}
@@ -73,7 +75,9 @@ function Navbar() {
               // router.push("/users");
             }}
           >
+           
             Profile
+            
           </div>
           <div
             className={"navbar__link"}
@@ -90,6 +94,7 @@ function Navbar() {
             }}
           >
             SignUp
+            
           </div>
         </div>
         <div
@@ -177,14 +182,14 @@ function Navbar() {
         </div>
       </div>
       <Drawer
-        open={open}
-        onClose={(event, reason) => {
-          if (reason !== "backdropClick") {
-            handleDrawerClose();
-          } else if (reason !== "escapeKeyDown") {
-            handleDrawerClose();
-          }
-        }}
+        // open={open}
+        // onClose={(event, reason) => {
+        //   if (reason !== "backdropClick") {
+        //     handleDrawerClose();
+        //   } else if (reason !== "escapeKeyDown") {
+        //     handleDrawerClose();
+        //   }
+        // }}
         anchor="left"
       >
         <div className={styles.nav__drawer}>
@@ -205,7 +210,7 @@ function Navbar() {
                 className={styles.navbar__link}
                 onClick={() => {
                   // router.push("/");
-                  handleDrawerClose();
+                  // handleDrawerClose();
                 }}
               >
                 About
@@ -214,7 +219,7 @@ function Navbar() {
                 className={styles.navbar__link}
                 onClick={() => {
                   // router.push("/users");
-                  handleDrawerClose();
+                  // handleDrawerClose();
                 }}
               >
                 Users
@@ -223,7 +228,7 @@ function Navbar() {
                 className={styles.navbar__link}
                 onClick={() => {
                   // router.push("/posts");
-                  handleDrawerClose();
+                  // handleDrawerClose();
                 }}
               >
                 Posts
