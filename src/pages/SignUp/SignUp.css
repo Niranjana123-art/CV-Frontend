@@ -5,9 +5,7 @@
   height: 35rem;
   background: rgba(124, 124, 124, 0.75);
   backdrop-filter: blur(2px);
-/* Note: backdrop-filter has minimal browser support */
-
-border-radius: 55px;
+  border-radius: 55px;
 }
 
 .SignUp_container {
@@ -32,13 +30,13 @@ border-radius: 55px;
 
   }
   
-  form {
+  .SignUp_content form {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
-  label {
+  .SignUp_content label {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -48,28 +46,29 @@ border-radius: 55px;
     text-align: start;
   }
   
-  input {
+  .SignUp_content input {
     font-size: 1.2rem;
     padding: 0.5rem;
     margin-bottom: 1rem;
     border-radius: 5px;
     border: 1px solid #ccc;
+    background-color: white;
   }
   
-  button {
-    font-size: 1.2rem;
-    width: 12rem;
-    height: 4rem;
-    padding: 0.5rem 1rem;
-    border-radius: 0.87;
-    border: none;
-    background-color:#002F32 ;
-    color: white;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+  .SignUp_content button {
+      font-size: 1.2rem;
+      width: 12rem;
+      height: 3.5rem;
+      border-radius: 21px;
+      border: none;
+      background-color:#002F32 ;
+      color: white;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      margin-top: 2rem;
   }
   
-  button:hover {
+  .SignUp_content button:hover {
     background-color:#01474d ;
    
   }

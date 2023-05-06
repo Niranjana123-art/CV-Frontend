@@ -12,9 +12,9 @@ const Profile = () => {
             </div>
             <div className='Profile_All'>
                 <div className='Profile_Details'>
-                      <h1>Sona Rose Martin</h1>
-                      <h2>Mumbai,Maharashtra</h2>
-                      <h3>UI/UX Designer</h3>
+                      <h1>Candidate Name</h1>
+                      <h2>City,State</h2>
+                      <h3>Job Role/Education</h3>
                 </div>
 
                 <div className='Profile_pic'>

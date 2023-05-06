@@ -1,6 +1,7 @@
 import React from 'react'
 import "./AptitudeScore.css"
 import {FiBookOpen} from "react-icons/fi";
+import {FaAddressCard} from "react-icons/fa";
 import {BsPersonCircle} from "react-icons/bs";
 
 const AptitudeScore = () => {
@@ -12,9 +13,9 @@ const AptitudeScore = () => {
                    <h2>What We Received From You</h2>
                 </div>
                 <div className='AptitudeScore_CandidateDetails'>
-                    <BsPersonCircle size={60}/>
-                    <h1>Niranjana B Nair</h1>
-                    <h2>Kerala,India</h2>
+                    <FaAddressCard size={100}/>
+                    <h1>Candidate Name</h1>
+                    <h2>City,State</h2>
                 </div>
                 <div className='AptitudeScore_CandidateScore'>
                 <h2>Maths</h2>
