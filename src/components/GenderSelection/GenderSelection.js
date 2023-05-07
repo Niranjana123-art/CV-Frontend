@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './GenderSelection.css'
-function GenderSelection() {
+function GenderSelection (props) {
   const [selectedGender, setSelectedGender] = useState('');
 
-  function handleGenderChange(event) {
-    setSelectedGender(event.target.value);
-  }
+  const handleGenderChange= (e) => {
+    setSelectedGender(e.target.value);
+    props.onGenderChange(e.target.value);
+  };
 
   return (
     <div className="gender-selection-wrapper">
@@ -13,24 +14,24 @@ function GenderSelection() {
       <div>
         <input
           type="checkbox"
-          id="male"
+          id="Male"
           name="gender"
-          value="male"
-          checked={selectedGender === 'male'}
+          value="Male"
+          checked={selectedGender === 'Male'}
           onChange={handleGenderChange}
         />
-        <label htmlFor="male">Male</label>
+        <label htmlFor="Male">Male</label>
       </div>
       <div>
         <input
           type="checkbox"
-          id="female"
+          id="Female"
           name="gender"
-          value="female"
-          checked={selectedGender === 'female'}
+          value="Female"
+          checked={selectedGender === 'Female'}
           onChange={handleGenderChange}
         />
-        <label htmlFor="female">Female</label>
+        <label htmlFor="Female">Female</label>
       </div>
       <div>
         <input

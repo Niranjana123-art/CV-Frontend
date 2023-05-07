@@ -56,16 +56,16 @@
   }
   
   .SignUp_content button {
-    font-size: 1.2rem;
-    width: 12rem;
-    height: 4rem;
-    padding: 0.5rem 1rem;
-    border-radius: 0.87;
-    border: none;
-    background-color:#002F32 ;
-    color: white;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+      font-size: 1.2rem;
+      width: 12rem;
+      height: 3.5rem;
+      border-radius: 21px;
+      border: none;
+      background-color:#002F32 ;
+      color: white;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      margin-top: 2rem;
   }
   
   .SignUp_content button:hover {

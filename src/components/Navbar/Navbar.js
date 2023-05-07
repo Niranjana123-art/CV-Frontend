@@ -9,10 +9,11 @@ import { IoCreate } from "react-icons/io5";
 import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/transitions/slide.css";
 // import AddPostModal from "../AddPostModal/AddPostModal";
-
+import { useNavigate } from 'react-router-dom'
 function Navbar() {
   // const router = useRouter();
   const [open, setOpen] = useState(false);
+  const navigate=useNavigate();
   // const [open1, setOpen1] = React.useState(false);
 
   // const handleClickOpen1 = () => {
@@ -35,25 +36,25 @@ function Navbar() {
         <div className={"navbar__left"}>
           <div
             className={"navbar__menu_container"}
-            onClick={() => {
-              setOpen(true);
-            }}
+            // onClick={() => {
+            //   setOpen(true);
+            // }}
           >
             <HiMenuAlt2
               className={"navbar__menu"}
-              onClick={() => {
-                setOpen(true);
-              }}
+              // onClick={() => {
+              //   setOpen(true);
+              // }}
             />
           </div>
           <div
             className={"navbar__logo"}
             onClick={() => {
-              // router.push("/");
+             navigate("/");
             }}
             style={{ cursor: "pointer"
                     }}
-          >
+            >
            
             CV Analysis
           </div>
@@ -62,23 +63,27 @@ function Navbar() {
           <div
             className={"navbar__link"}
             onClick={() => {
-              // router.push("/");
+             navigate("/");
             }}
           >
+            
             Home
+          
           </div>
           <div
             className={"navbar__link"}
             onClick={() => {
-              // router.push("/users");
+             navigate("/Profile");
             }}
           >
+           
             Profile
+            
           </div>
           <div
             className={"navbar__link"}
             onClick={() => {
-              // router.push("/posts");
+             navigate("/login");
             }}
           >
             Login
@@ -86,10 +91,11 @@ function Navbar() {
           <div
             className={"navbar__link"}
             onClick={() => {
-              // router.push("/posts");
+             navigate("/signup");
             }}
           >
             SignUp
+            
           </div>
         </div>
         <div
@@ -128,7 +134,7 @@ function Navbar() {
             >
               <MenuItem
                 onClick={() => {
-                  // router.push(`/profile`);
+                 navigate(`/profile`);
                 }}
                 style={{
                   color: "#a6432d",
@@ -177,14 +183,14 @@ function Navbar() {
         </div>
       </div>
       <Drawer
-        open={open}
-        onClose={(event, reason) => {
-          if (reason !== "backdropClick") {
-            handleDrawerClose();
-          } else if (reason !== "escapeKeyDown") {
-            handleDrawerClose();
-          }
-        }}
+        // open={open}
+        // onClose={(event, reason) => {
+        //   if (reason !== "backdropClick") {
+        //     handleDrawerClose();
+        //   } else if (reason !== "escapeKeyDown") {
+        //     handleDrawerClose();
+        //   }
+        // }}
         anchor="left"
       >
         <div className={styles.nav__drawer}>
@@ -204,7 +210,7 @@ function Navbar() {
               <div
                 className={styles.navbar__link}
                 onClick={() => {
-                  // router.push("/");
+                 navigate("/");
                   handleDrawerClose();
                 }}
               >
@@ -213,7 +219,7 @@ function Navbar() {
               <div
                 className={styles.navbar__link}
                 onClick={() => {
-                  // router.push("/users");
+                 navigate("/users");
                   handleDrawerClose();
                 }}
               >
@@ -222,7 +228,7 @@ function Navbar() {
               <div
                 className={styles.navbar__link}
                 onClick={() => {
-                  // router.push("/posts");
+                 navigate("/posts");
                   handleDrawerClose();
                 }}
               >

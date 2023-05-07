@@ -23,13 +23,18 @@
     align-items: center;
 }
 .AptitudeScore_CandidateDetails{
+    padding-top: 3rem;
     padding-left: 2rem;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 .AptitudeScore_CandidateScore{
     padding-top: 2rem;
+}
+.AptitudeScore_CandidateScore h2{
+    margin-top: 1rem;
 }
 .AptitudeScore_Button{
     padding-top: 2rem;

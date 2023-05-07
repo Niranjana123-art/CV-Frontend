@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+// import axiosInstance from "./auth/authHandler";
+// import { baseUrl } from "./utils/Urls";
 import './App.css';
 import DetailAddTwo from "./pages/DetailAddTwo/DetailAddTwo"
 import Landing from "./pages/Landing/Landing";
@@ -18,8 +19,9 @@ import PersonalitySuccess from "./components/PersonalitySuccess/PersonalitySucce
 function App() {
   return (
     <div className="App">
-    <Navbar/>
+  
     <BrowserRouter>
+    <Navbar/>
        <Routes>    
             <Route path="/" element={<Landing />} />
             <Route path="/login" element={<Login />} />
@@ -32,7 +34,6 @@ function App() {
             <Route path="/Profile" element={<Profile />} />
             <Route path="/personality-score" element={<PersonalityScore />} />
             <Route path="/aptitude-score" element={<AptitudeScore />} />
-            
       </Routes>
       </BrowserRouter>
       </div>
