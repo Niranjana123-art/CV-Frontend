@@ -3,6 +3,8 @@ import './DetailAddTwo.css';
 import {FaPhoneSquareAlt} from "react-icons/fa"
 import {FaEnvelope} from "react-icons/fa"
 import {FaLinkedin} from "react-icons/fa"
+// import { useNavigate } from 'react-router-dom';
+// import { baseUrl } from '../../utils/Urls';
 
 
 const DetailAddTwo = () => {

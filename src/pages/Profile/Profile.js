@@ -2,6 +2,10 @@ import React from 'react'
 import './Profile.css'
 import back from "../../assets/Profile_Background.jpeg"
 import pic from "../../assets/Profile_Pic2.jpeg"
+// import { baseUrl } from '../../utils/Urls'
+// import axiosInstance from '../../auth/authHandler'
+// import PictureDisplay from '../PictureDisplay/PictureDisplay'
+import PictureDisplay from '../../components/PictureDisplay/PictureDisplay'
 
 const Profile = () => {
   return (
@@ -20,6 +24,9 @@ const Profile = () => {
                 <div className='Profile_pic'>
                     <img src={pic} alt=''/>
                 </div>
+            </div>
+            <div>
+              <PictureDisplay/>
             </div>
       </div>
     </div>

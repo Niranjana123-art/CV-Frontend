@@ -13,8 +13,8 @@ import axiosInstance from '../../auth/authHandler'
 
 
 const DetailAdd = () => {
-    const navigate = useNavigate();
-    const [userid, setUserId] = useState(null);
+  const navigate = useNavigate();
+  const [userid, setUserId] = useState(null);
   const [dob, setDob] = useState('');
   const [location, setLocation] = useState('');
   const [gender, setGender] = useState('');
