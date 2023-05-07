@@ -13,7 +13,7 @@ import Profile from "./pages/Profile/Profile";
 import GenderSelection from "./components/GenderSelection/GenderSelection";
 import PersonalityScore from "./pages/PersonalityScore/PersonalityScore";
 import PersonalitySuccess from "./components/PersonalitySuccess/PersonalitySuccess";
-import Rating from "./components/Rating/Rating";
+
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
             <Route path="/Profile" element={<Profile />} />
             <Route path="/personality-score" element={<PersonalityScore />} />
             <Route path="/aptitude-score" element={<AptitudeScore />} />
-            <Route path="/rating" element={<Rating />} />
+            
       </Routes>
       </BrowserRouter>
       </div>
