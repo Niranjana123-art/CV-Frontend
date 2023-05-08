@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Navbar from '../../components/Navbar/Navbar';
 import './Login.css';
 import CustomTitle from '../../utils/CustomTitle';
 import { baseUrl } from '../../utils/Urls';
@@ -30,6 +31,8 @@ const Login = () => {
       );
   };    
   return (
+    <>
+    <Navbar/>
     <div className="login-container">
       <div className='Login_content'>
       <h1>Log In</h1>
@@ -45,10 +48,13 @@ const Login = () => {
         <button type="submit">Log In</button>
       </form>
       <div className="login-link">
-        <p>Don’t have an account?  <a href="#">Sign Up</a></p>
+        <p>Don’t have an account?  <a href="/signup">SignUp</a>
+
+</p>
       </div>
       </div>
     </div>
+    </>
   )
 }
 

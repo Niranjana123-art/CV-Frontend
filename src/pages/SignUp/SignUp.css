@@ -1,11 +1,12 @@
 
 .SignUp_content{
   padding-top: 3rem;
+  margin-top: 3rem;
   width: 25rem;
   height: 35rem;
   background: rgba(124, 124, 124, 0.75);
   backdrop-filter: blur(2px);
-  border-radius: 55px;
+  border-radius: 30px;
 }
 
 .SignUp_container {
@@ -83,12 +84,12 @@
     text-align: center;
   }
   
-  .SignUp-link a {
+  .SignUp_link a {
     color: #4AA9BC;
     text-decoration:solid;
     
   }
   
-  .SignUp-link a:hover {
+  .SignUp_link a:hover {
     text-decoration: underline;
   }

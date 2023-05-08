@@ -1,6 +1,7 @@
 import React from 'react'
+import Navbar from '../../components/Navbar/Navbar';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import { baseUrl } from '../../utils/Urls';
 import './Profile.css'
 import back from "../../assets/Profile_Background.jpeg"
@@ -31,6 +32,7 @@ import axiosInstance from '../../auth/authHandler'
 
 
 const Profile = () => {
+  
   // const [candidateDetails, setCandidateDetails] = useState(null);
   const [userid, setUserId] = useState(null);
   const [idval, setId] = useState('');
@@ -66,6 +68,8 @@ const Profile = () => {
   
 
   return (
+    <>
+    <Navbar/>
     <div className='Profile_Container'>
       <div className='Profile_Content'>
         <div className='Profile_background'>
@@ -84,6 +88,7 @@ const Profile = () => {
         </div>
       </div>
     </div>
+    </>
   )
   }
 

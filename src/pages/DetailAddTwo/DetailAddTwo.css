@@ -9,7 +9,7 @@
     /* position: fixed; */
 }
 .DetailAddTwo_Box{
-    margin-top: 3rem;
+   
     padding-top: 4rem;
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@
     width: 67.75rem;
     height: 33.75rem;
     background: rgba(124, 124, 124, 0.75);
-    border-radius: 55px;
+    border-radius: 30px;
 }
 .DetailAddTwo_Content{
     display: flex;
@@ -28,12 +28,16 @@
 }
 
 .Additional_info_heading{
+    align-items: center;
+    display: flex;
+    justify-content: center;
     width: 27rem;
     height: 2rem;
     background: #202322;
     border-radius: 10px;
     color: white;
     text-align: center;
+    padding: 5px;
 }
 .Additonal_info_content{
     padding-top: 2rem;
@@ -48,6 +52,11 @@ label{
     text-align: start;
     color: rgba(0, 0, 0, 0.5); 
 }
+.label_detail2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 input{
     font-size: 1.2rem;
     padding: 0.5rem;
@@ -56,6 +65,16 @@ input{
     border: 1px none #ccc;
     background-color: rgba(124, 124, 124, 0.75);
 }
+.text_detail2 input{
+    margin-left: 3rem;
+}
+.email_detail2 input{
+    margin-left: 3.4rem;
+}
+.resume_detail{
+    margin-top: 3rem;
+}
+
 .UploadResume_heading{
     width: 27rem;
     height: 2rem;
@@ -96,4 +115,5 @@ form {
     font-size: 20px;
     text-align: center;
     color: #FFFFFF;
+    margin-top: 3rem;
 }

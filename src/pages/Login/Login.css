@@ -6,7 +6,7 @@
     /* background-color: rgba(41, 39, 39, 0.3);
   box-shadow: 0 5px 30px black; */
     backdrop-filter: blur(2px);
-    border-radius: 55px;
+    border-radius: 30px;
   }
   
   .login-container {

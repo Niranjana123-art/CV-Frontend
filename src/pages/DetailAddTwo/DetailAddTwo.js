@@ -55,18 +55,27 @@ const DetailAddTwo = () => {
 
                   <div className='Additonal_info_content'>
                           <form encType="multipart/form-data" onSubmit={handleSubmit}>
-                            <label><FaPhoneSquareAlt size={30} color='black'/>Phone No:
-                            <input type='text' value={phoneNo} onChange={(e) => setPhoneNo(e.target.value)} />
-                            </label>
-                            <label><FaEnvelope size={30} color='black'/>E-mail Id: 
-                            <input type='text' value={emailId} onChange={(e) => setEmailId(e.target.value)} />
-                            </label>
-                            <label><FaLinkedin size={30}  color='black'/>LinkedIn Profile:
-                            <input type='text' value={linkedIn} onChange={(e) => setLinkedIn(e.target.value)} />
-                            </label>
-                            <label>Resume:</label>
-                            <input type='file' onChange={(e) => setResume(e.target.files[0])} />
-                            <button className ='Button_Submit' type='Submit'> SUBMIT</button>
+                            <div className='label_detail2'>
+                              <div className='text_detail2'>
+                                  <label><FaPhoneSquareAlt size={30} color='black'style={{marginRight: '10px'}}/>Phone No:
+                                  <input type='text' value={phoneNo} onChange={(e) => setPhoneNo(e.target.value)} />
+                                  </label>
+                              </div>
+                              <div className='email_detail2'>
+                                  <label><FaEnvelope size={30} color='black' style={{marginRight: '10px'}}/>E-mail Id: 
+                                  <input type='text' value={emailId} onChange={(e) => setEmailId(e.target.value)} />
+                                  </label>
+                             </div>
+                                  <label><FaLinkedin size={30}  color='black' style={{marginRight: '10px'}}/>LinkedIn Profile:
+                                  <input type='text' value={linkedIn} onChange={(e) => setLinkedIn(e.target.value)} />
+                                  </label>
+                                <div className='resume_detail'> 
+                                  <label>Resume:</label>
+                                  <input type='file' onChange={(e) => setResume(e.target.files[0])} />
+                                  </div> 
+                              </div>
+                              <button className ='Button_Submit' type='Submit'> SUBMIT</button>
+                            
                           </form>
                           
 

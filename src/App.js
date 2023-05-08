@@ -1,4 +1,4 @@
-import Navbar from "./components/Navbar/Navbar";
+// import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import axiosInstance from "./auth/authHandler";
 // import { baseUrl } from "./utils/Urls";
@@ -21,7 +21,7 @@ function App() {
     <div className="App">
   
     <BrowserRouter>
-    <Navbar/>
+    {/* <Navbar/> */}
        <Routes>    
             <Route path="/" element={<Landing />} />
             <Route path="/login" element={<Login />} />
