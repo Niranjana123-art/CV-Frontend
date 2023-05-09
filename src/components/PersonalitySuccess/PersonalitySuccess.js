@@ -1,19 +1,27 @@
-import React  from 'react';
-import './PersonalitySuccess.css';
-
-const PersonalitySuccess = () => {
-  return (
-    <div className='PersonalitySuccess_Container'> 
-      <div className='PersonalitySuccess_Content'>
-           <div className='PersonalitySuccess_Text'>
-             <p>Personality Test Submitted Successfully!</p>
+import React from 'react'
+import { createPortal } from 'react-dom'
+import './PersonalitySuccess.css'
+import SvgImage from  '../../assets/bgmodal.svg'
+const PersonalitySuccess = ({open,setOpen}) => {
+ if (!open){
+    return null
+ }
+ 
+  return createPortal(
+    <div className='PersonalitySuccess_Container'>
+     
+    <div className='PersonalitySuccess_Content' style={{ backgroundImage: `url(${SvgImage})` }}>
+         <div className='PersonalitySuccess_Text'>
+           Personality Test <br/>Submitted <span style={{color:'green'}}>Successfully!</span>
+         </div>
+           <div>
+           <button onClick={()=> setOpen(false)} className='PersonalitySuccess_button'>Attend Aptitude Test</button>
            </div>
-             <div>
-             <button className='PersonalitySuccess_button'>Attend Aptitude Test</button>
-             </div>
-      </div>
     </div>
+  </div>,
+  document.getElementById('portal')
   )
+ 
 }
 
 export default PersonalitySuccess
