@@ -43,7 +43,7 @@ const DetailAdd = () => {
   }).then((response)=>{
     if(response.status===201){
     toast.success("Message sent successfully!!!")
-      navigate("/detail-add2")
+      navigate(`/detail-add2?id=${idval}`)
     //   window.location.reload();
     }
   },(error)=>{

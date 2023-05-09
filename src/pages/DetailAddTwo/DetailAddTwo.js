@@ -4,12 +4,12 @@ import { baseUrl } from '../../utils/Urls'
 import { useNavigate } from 'react-router-dom'
 import { toast } from "react-hot-toast"; 
 import axiosInstance from '../../auth/authHandler'
+import { Button } from "react-bootstrap";
 
 import {FaPhoneSquareAlt} from "react-icons/fa"
 import {FaEnvelope} from "react-icons/fa"
 import {FaLinkedin} from "react-icons/fa"
-// import { useNavigate } from 'react-router-dom';
-// import { baseUrl } from '../../utils/Urls';
+
 
 const DetailAddTwo = () => {
   const navigate = useNavigate();
@@ -17,25 +17,25 @@ const DetailAddTwo = () => {
   const [emailId, setEmailId] = useState('');
   const [linkedIn, setLinkedIn] = useState('');
   const [resume, setResume] = useState(null);
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
-  formData.append('PhoneNo', phoneNo);
-  formData.append('EmailID', emailId);
-  formData.append('LinkedIn', linkedIn);
-  formData.append('ResumeFile', resume);
-
-  axiosInstance.post(`${baseUrl}/applicant-details-register/`, formData, {
+  formData.append('phoneno', phoneNo);
+  formData.append('mailid', emailId);
+  formData.append('linked_in_url', linkedIn);
+  formData.append('resume', resume);
+  axiosInstance.post(`${baseUrl}/resume-analyze/`, formData, {
     headers: {
       'Content-Type': 'multipart/form-data'
     }
   })
   .then((response) => {
-    if(response.status===201){
-      toast.success("Message sent successfully!!!")
-        navigate("/resume-upload")
-      }
+        console.log(response)
+      
+        navigate(`/profile?mailid=${emailId}&phoneno=${phoneNo}`);
+
+
   })
   .catch((error) => {
     console.log(error);
