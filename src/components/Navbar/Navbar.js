@@ -1,8 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, {useEffect, useState } from "react";
 import styles from "./Navbar.css";
 import { HiMenuAlt2 } from "react-icons/hi";
 // import { useRouter } from "next/router";
 import { Drawer } from "@mui/material";
+import { baseUrl } from "../../utils/Urls";
+import axiosInstance from "../../auth/authHandler";
 import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
 // import { UserContext } from "@/context/UserContext";
 import { IoCreate } from "react-icons/io5";
@@ -10,10 +12,24 @@ import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/transitions/slide.css";
 // import AddPostModal from "../AddPostModal/AddPostModal";
 import { useNavigate } from 'react-router-dom'
+import { useAccordionButton } from "react-bootstrap";
 function Navbar() {
   // const router = useRouter();
   const [open, setOpen] = useState(false);
   const navigate=useNavigate();
+  const [idval,setId] = useState('');
+
+  useEffect(() => {
+    // Fetch the related user object and set the user id state
+    axiosInstance.get(`${baseUrl}/current-user/`)
+      .then(response => {
+        setId(response.data.id);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
+
   // const [open1, setOpen1] = React.useState(false);
 
   // const handleClickOpen1 = () => {
@@ -73,7 +89,7 @@ function Navbar() {
           <div
             className={"navbar__link"}
             onClick={() => {
-             navigate("/Profile");
+             navigate(`/Profile?id=${idval}`);
             }}
           >
            

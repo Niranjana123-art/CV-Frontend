@@ -1,4 +1,4 @@
-import Navbar from "./components/Navbar/Navbar";
+// import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import axiosInstance from "./auth/authHandler";
 // import { baseUrl } from "./utils/Urls";
@@ -15,13 +15,15 @@ import GenderSelection from "./components/GenderSelection/GenderSelection";
 import PersonalityScore from "./pages/PersonalityScore/PersonalityScore";
 import PersonalitySuccess from "./components/PersonalitySuccess/PersonalitySuccess";
 import PictureDisplay from "./pages/PictureDisplay/PictureDisplay";
+import PersonalityQ from "./components/PersonalityQ/PersonalityQ";
+
 
 function App() {
   return (
     <div className="App">
   
     <BrowserRouter>
-    <Navbar/>
+    {/* <Navbar/> */}
        <Routes>    
             <Route path="/" element={<Landing />} />
             <Route path="/login" element={<Login />} />
@@ -35,6 +37,7 @@ function App() {
             <Route path="/personality-score" element={<PersonalityScore />} />
             <Route path="/aptitude-score" element={<AptitudeScore />} />
             <Route path="/pic-display" element={<PictureDisplay />} />
+            <Route path="/personalityq" element={<PersonalityQ />} />
       </Routes>
       </BrowserRouter>
       </div>

@@ -8,16 +8,22 @@
     justify-content: center;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(129.93deg, #55AEC0 0.09%, #003D3E 0.1%, #003339 21.43%, #1F2221 68.35%);;
+    background: linear-gradient(129.93deg, #55AEC0 0.09%, #003D3E 0.1%, #003339 21.43%, #1F2221 68.35%);
     background-size: cover;
-   
+    /* background-image: url(../../assets/vector.png ); */
+    
+
 }
 .landing__container h1{
     font-family: "Quicksand";
-    font-size: 3rem;
+    font-size: 4rem;
     color:white;
     font-weight: 400;
-    margin-left: 1.2em;
+    margin-left: 0.8em;
+}
+img[src="../../assets/vector.png"]{
+width: 5rem;
+ height: 5rem;
 }
 .bold_header{
     font-weight: 700; 

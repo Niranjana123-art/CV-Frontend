@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import Navbar from '../../components/Navbar/Navbar';
 import './SignUp.css';
 import axios from 'axios';
 import { baseUrl } from '../../utils/Urls';
@@ -28,6 +29,8 @@ const SignUp = () => {
     })
   }
   return (
+    <>
+    <Navbar/>
     <div className="SignUp_container">
    
           <div className='SignUp_content'>
@@ -45,10 +48,11 @@ const SignUp = () => {
                         <button type="submit">Sign up</button>
                 </form>
                 <div className="SignUp_link">
-                   <p>Already have an account? <a href="#">Log in here</a></p>
+                   <p>Already have an account? <a href="/login">Login</a></p>
                 </div>
           </div>
 </div>
+</>
   )
 }
 

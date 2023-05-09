@@ -36,7 +36,7 @@ const DetailAdd = () => {
     e.preventDefault();
     axiosInstance.post(`${baseUrl}/detail-add/`,
     {
-      name:idval,
+      name:userid,
       dob: dob,
       location: location,
       gender: gender
@@ -58,57 +58,57 @@ const DetailAdd = () => {
   return (
     <div className='detail_add__container'>
         <div className='detail_add__contents'>
-        <FaVenus size='50' color='#4AA9BC'/>
-            <div className='quote__content'>
-            <p>You're about to start exploring, so</p>
-            <p><span className='next__line'>tell about yourself!</span></p>
-            </div>
+            <FaVenus size='50' color='#4AA9BC'/>
+                <div className='quote__content'>
+                    <p>You're about to start exploring, so</p>
+                    <p><span className='next__line'>tell about yourself!</span></p>
+                </div>
             <div className='input__contents'>
             <>
-            <form onSubmit={handleSubmit}>
-            <hr/>
-                <label htmlFor="name"><FaUserAlt/> Name:
-                <input
-            type="text"
-            id="name"
-            name="name"
-            value={userid}
-            required
-            readOnly
-          />
-                </label>
-                <hr/>
-                <label htmlFor="dob"><FaCalendarAlt/> D.O.B:
-                <input
-                type="date"
-                id="dob"
-                value={dob}
-                onChange={(e) => setDob(e.target.value)}
-                required
-                 />
-                 <hr/>
-                </label>
-                <label htmlFor="location"><FaMapMarkerAlt/> Location:
-                <input
+                <form onSubmit={handleSubmit}>
+                  <div className='input_detail'>
+                    <label htmlFor="name"><FaUserAlt/> Name:
+                    <input
                 type="text"
-                id="location"
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
+                id="name"
+                name="name"
+                value={userid}
                 required
-                />
-                </label>
-                <hr/>
-            <div>
-                <GenderSelection onGenderChange={handleGenderChange}/>
-            </div>
-            <div>
-                <button>
-                    Next 
-                </button>
-            </div>
-            </form>
+                readOnly
+              />
+                    </label>
+                    <hr/>
+                      <label htmlFor="dob"><FaCalendarAlt/> D.O.B:
+                          <input
+                          type="date"
+                          id="dob"
+                          value={dob}
+                          onChange={(e) => setDob(e.target.value)}
+                          required
+                          />
+                      <hr/>
+                      </label>
+                      <label htmlFor="location"><FaMapMarkerAlt/> Location:
+                          <input
+                          type="text"
+                          id="location"
+                          value={location}
+                          onChange={(e) => setLocation(e.target.value)}
+                          required
+                          />
+                      </label>
+                      </div>  
+                  <div>
+                      <GenderSelection onGenderChange={handleGenderChange}/>
+                  </div>
+                  <div>
+                      <button>
+                          Next 
+                      </button>
+                  </div>
+                </form>
             </>
-        </div>
+         </div>
         </div>
     </div>
   );

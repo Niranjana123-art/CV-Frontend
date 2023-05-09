@@ -7,27 +7,25 @@ import { useLocation } from 'react-router-dom'
 //import { useNavigate } from 'react-router-dom'
 
 
-const PictureDisplay = ({mailid, phoneno}) => {
+const PictureDisplay = ({id}) => {
     const location = useLocation();
     const params = new URLSearchParams(location.search);
-    const email = params.get('mailid');
-    const phoneNo = params.get('phoneno');
+    const idval = params.get('id');
+    // const phoneNo = params.get('phoneno');
     const [image,setImage] = useState();
     // const navigate = useNavigate();
     useEffect(() => {
-        axiosInstance.get(`${baseUrl}/resume-analyze/`)
-          .then(response => {
-                const data =response.data;
-                const filteredData = data.filter(item => (
-                    item.mailid === email && item.phoneno === phoneNo
-                  ));
-                  console.log(filteredData);
-                  if (filteredData.length > 0 && filteredData[0].img){
-                      setImage(filteredData[0].img);
-                  }
-          })
-          .catch(error => console.error(error));
-      }, [mailid, phoneno]);
+        axiosInstance.get(`${baseUrl}/resume-analyze/${idval}`)
+        .then(response => {
+              console.log(response.data)
+              const data = response.data.img;
+        // if (data.id == idval && data.img[0]) {}
+          setImage(data);
+        
+          
+      })
+        .catch(error =>{console.log(error)});
+      }, [id]);
       if (!image) {
         return <div>Loading...</div>;
       }
@@ -42,4 +40,4 @@ const PictureDisplay = ({mailid, phoneno}) => {
       ) 
 }
 
-export default PictureDisplay
+export default PictureDisplay;

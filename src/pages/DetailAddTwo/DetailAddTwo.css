@@ -9,7 +9,7 @@
     /* position: fixed; */
 }
 .DetailAddTwo_Box{
-    margin-top: 3rem;
+   
     padding-top: 4rem;
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@
     width: 67.75rem;
     height: 33.75rem;
     background: rgba(124, 124, 124, 0.75);
-    border-radius: 55px;
+    border-radius: 30px;
 }
 .DetailAddTwo_Content{
     display: flex;
@@ -28,12 +28,16 @@
 }
 
 .Additional_info_heading{
+    align-items: center;
+    display: flex;
+    justify-content: center;
     width: 27rem;
     height: 2rem;
     background: #202322;
     border-radius: 10px;
     color: white;
     text-align: center;
+    padding: 5px;
 }
 .Additonal_info_content{
     padding-top: 2rem;
@@ -48,6 +52,11 @@ label{
     text-align: start;
     color: rgba(0, 0, 0, 0.5); 
 }
+.label_detail2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 input{
     font-size: 1.2rem;
     padding: 0.5rem;
@@ -55,23 +64,42 @@ input{
     border-radius: 5px;
     border: 1px none #ccc;
     background-color: rgba(124, 124, 124, 0.75);
+    
 }
-.UploadResume_heading{
-    width: 27rem;
-    height: 2rem;
-    background: #202322;
-    border-radius: 10px;
-    color: white;
-    text-align: center;
+.text_detail2 input{
+    margin-left: 3rem;
 }
-.UploadResume_content{
+.email_detail2 input{
+    margin-left: 3.4rem;
+}
+.upload-btn-wrapper {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    row-gap: 1rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 2rem;
+    
+  }
+  .btn {
+   
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 14rem;
+    height: 3rem;
+  }
+
+  .upload-btn-wrapper input[type=file] {
+    
+    opacity: 0;
+  }
+
+
 form {
     display: flex;
     flex-direction: column;
@@ -96,4 +124,6 @@ form {
     font-size: 20px;
     text-align: center;
     color: #FFFFFF;
+    margin-top: 2rem;
+    border: none;
 }
