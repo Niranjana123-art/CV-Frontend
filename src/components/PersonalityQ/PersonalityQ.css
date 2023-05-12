@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 .persolityq_container{
     min-height: 100vh;
     width: 100%;
     background: linear-gradient(129.93deg, #55AEC0 0.09%, #003D3E 0.1%, #003339 21.43%, #1F2221 68.35%);
+    
 }
 
 .questions_container {
@@ -9,6 +11,8 @@
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
+    
+   
   }
   
   .radio_container {
@@ -20,6 +24,11 @@
     
   }
   
+.radio_container label {
+    display: block;
+    padding: 2rem;
+  }
+  
   .radio_questions {
     display: flex;
     align-items: center;
@@ -27,16 +36,26 @@
   }
 
   input[type="radio"] {
-    transform: scale(2);
-    margin-right: 35px;
+    -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* custom radio button */
+  width: 25px;
+  height: 25px;
+  border: 3px solid #000000;
+  border-radius: 50%;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  margin-right: 5px;
   }
   
 h3{
-    padding-top: 2rem;
+    padding-top: 6rem;
     font-family: 'Montserrat';
 font-style: normal;
 font-weight: 100;
 font-size: 50px;
 text-align: center;
 color: white;
+margin-left: 4rem;
 }
