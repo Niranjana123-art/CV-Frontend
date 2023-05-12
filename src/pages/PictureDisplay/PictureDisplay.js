@@ -27,7 +27,7 @@ const PictureDisplay = ({mailid, phoneno}) => {
                   }
           })
           .catch(error => console.error(error));
-      }, [mailid, phoneno]);
+      });
       if (!image) {
         return <div>Loading...</div>;
       }
