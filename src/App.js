@@ -14,6 +14,7 @@ import Profile from "./pages/Profile/Profile";
 import GenderSelection from "./components/GenderSelection/GenderSelection";
 import PersonalityScore from "./pages/PersonalityScore/PersonalityScore";
 import PersonalitySuccess from "./components/PersonalitySuccess/PersonalitySuccess";
+import PictureDisplay from "./pages/PictureDisplay/PictureDisplay";
 import PersonalityQ from "./components/PersonalityQ/PersonalityQ";
 
 
@@ -35,6 +36,7 @@ function App() {
             <Route path="/Profile" element={<Profile />} />
             <Route path="/personality-score" element={<PersonalityScore />} />
             <Route path="/aptitude-score" element={<AptitudeScore />} />
+            <Route path="/pic-display" element={<PictureDisplay />} />
             <Route path="/personalityq" element={<PersonalityQ />} />
       </Routes>
       </BrowserRouter>

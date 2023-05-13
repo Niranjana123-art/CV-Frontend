@@ -2,7 +2,7 @@ import React,{useEffect,useState}  from 'react';
 import './DetailAddTwo.css';
 import { baseUrl } from '../../utils/Urls'
 import { useNavigate } from 'react-router-dom'
-import { toast } from "react-hot-toast"; 
+// import { toast } from "react-hot-toast"; 
 import axiosInstance from '../../auth/authHandler'
 // import { Button } from "react-bootstrap";
 
@@ -17,25 +17,34 @@ const DetailAddTwo = () => {
   const [emailId, setEmailId] = useState('');
   const [linkedIn, setLinkedIn] = useState('');
   const [resume, setResume] = useState(null);
+  const [idval,setId] = useState('');
+  
+useEffect(() => {
+    // Fetch the related user object and set the user id state
+    axiosInstance.get(`${baseUrl}/current-user/`)
+      .then(response => {
+        setId(response.data.id);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
-  formData.append('PhoneNo', phoneNo);
-  formData.append('EmailID', emailId);
-  formData.append('LinkedIn', linkedIn);
-  formData.append('ResumeFile', resume);
-
-  axiosInstance.post(`${baseUrl}/applicant-details-register/`, formData, {
+  formData.append('phoneno', phoneNo);
+  formData.append('mailid', emailId);
+  formData.append('linked_in_url', linkedIn);
+  formData.append('resume', resume);
+  axiosInstance.post(`${baseUrl}/resume-analyze/`, formData, {
     headers: {
       'Content-Type': 'multipart/form-data'
     }
   })
   .then((response) => {
-    if(response.status===201){
-      toast.success("Message sent successfully!!!")
-        navigate("/resume-upload")
-      }
+        console.log(response);
+        navigate(`/resume-upload?id=${idval}`)
   })
   .catch((error) => {
     console.log(error);

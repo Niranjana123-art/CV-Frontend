@@ -7,6 +7,7 @@ import './Profile.css'
 import back from "../../assets/Profile_Background.jpg"
 import pic from "../../assets/user.png"
 import axiosInstance from '../../auth/authHandler'
+import PictureDisplay from '../../components/PictureDisplay/PictureDisplay';
 
 const Profile = () => {
   
@@ -65,6 +66,7 @@ const Profile = () => {
                 </div>
           </div>
     </div>
+    <PictureDisplay/>
     </>
   )
   }

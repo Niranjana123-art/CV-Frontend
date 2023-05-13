@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import './PersonalityQ.css'; 
-
+import PersonalitySuccess from "../PersonalitySuccess/PersonalitySuccess"
 const PersonalityQ = () => {
   const [answer, setAnswer] = useState(null);
 
   const options = [
-    'Strongly Agree',
     '',
     '',
     '',
@@ -13,14 +12,17 @@ const PersonalityQ = () => {
     '',
     '',
     '',
-    '',
-    'Strongly Disagree'
+    ''
   ];
 
   const handleSubmit = (event) => {
     event.preventDefault();
     alert(`Selected answer: ${answer}`);
   };
+  const[open,setOpen]=useState(false)
+  const handleModal=()=>{
+    setOpen(true)
+  }
 
   return (
     <form onSubmit={handleSubmit}>
@@ -42,8 +44,16 @@ const PersonalityQ = () => {
                         </label>
                     ))}
                     </div>
+                    <div className='radio_optLabel'>
+                      <div>Strongly Agree</div>
+                      <div>Strongly Disagree</div>
+                    </div>
+                </div>
+                <div>
+                  <button className='personalityQ_submit_btn' type="submit" onClick={handleModal}>Submit</button>
                 </div>
       </div>
+      <PersonalitySuccess open={open} setOpen={setOpen}/>
     </form>
 
   );
