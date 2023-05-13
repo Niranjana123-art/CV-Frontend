@@ -36,7 +36,7 @@ const DetailAdd = () => {
     e.preventDefault();
     axiosInstance.post(`${baseUrl}/detail-add/`,
     {
-      name:idval,
+      name:userid,
       dob: dob,
       location: location,
       gender: gender

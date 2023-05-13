@@ -4,7 +4,7 @@ import { baseUrl } from '../../utils/Urls'
 import { useNavigate } from 'react-router-dom'
 import { toast } from "react-hot-toast"; 
 import axiosInstance from '../../auth/authHandler'
-import { Button } from "react-bootstrap";
+// import { Button } from "react-bootstrap";
 
 import {FaPhoneSquareAlt} from "react-icons/fa"
 import {FaEnvelope} from "react-icons/fa"
@@ -71,11 +71,11 @@ const DetailAddTwo = () => {
                                   <label><FaLinkedin size={30}  color='black' style={{marginRight: '10px'}}/>LinkedIn Profile:
                                   <input type='text' value={linkedIn} onChange={(e) => setLinkedIn(e.target.value)} />
                                   </label>
-                                  <div className="upload-btn-wrapper">
-                                    <button className="btn">UPLOAD RESUME 
+                                  {/* <div className="upload-btn-wrapper"> */}
+                                    <label>UPLOAD RESUME 
                                     <input type="file" name="myfile" onChange={(e) => setResume(e.target.files[0])} />
-                                    </button>
-                                  </div>
+                                    </label>
+                                  {/* </div> */}
                                   
                               </div>
                               <button className ='Button_Submit' type='Submit'> SUBMIT</button>
