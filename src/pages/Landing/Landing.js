@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import { useNavigate } from 'react-router-dom'
 import './Landing.css'
-
+import landing from '../../assets/landing.svg'
 
 const Landing = () => {
   const navigate=useNavigate();
@@ -11,7 +11,7 @@ const Landing = () => {
      <Navbar/>
     <div className='landing__container'>
     {/* <img src="../../assets/vector.png" /> */}
-
+      <div className='landing__content'>
       <div>
         <h1 >Let</h1>
         <h1 className='bold_header'>Recruiters </h1>
@@ -22,7 +22,10 @@ const Landing = () => {
             }}>
         Get Started
       </button>
-      
+      </div>
+      <div className='landing__image'>
+        <img src={landing}></img>
+      </div>
     </div>
     </>
   )
