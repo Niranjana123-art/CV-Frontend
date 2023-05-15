@@ -13,8 +13,8 @@ import axiosInstance from '../../auth/authHandler'
 
 
 const DetailAdd = () => {
-    const navigate = useNavigate();
-    const [userid, setUserId] = useState(null);
+  const navigate = useNavigate();
+  const [userid, setUserId] = useState(null);
   const [dob, setDob] = useState('');
   const [location, setLocation] = useState('');
   const [gender, setGender] = useState('');
@@ -36,14 +36,14 @@ const DetailAdd = () => {
     e.preventDefault();
     axiosInstance.post(`${baseUrl}/detail-add/`,
     {
-      name:idval,
+      name:userid,
       dob: dob,
       location: location,
       gender: gender
   }).then((response)=>{
     if(response.status===201){
     toast.success("Message sent successfully!!!")
-      navigate("/detail-add2")
+      navigate(`/detail-add2?id=${idval}`)
     //   window.location.reload();
     }
   },(error)=>{
