@@ -42,33 +42,35 @@ function AptitudeQ() {
   };
 
   const handleNextQuestion = () => {
-    // Check answer, provide feedback, and move to the next question
-    // Add your logic here
-
-    // Move to the next question
+    
     setCurrentQuestion((prevQuestion) => prevQuestion + 1);
     setSelectedOption(null);
   };
 
-  const renderOptions = () => {
-    return questions[currentQuestion].options.map((option, index) => (
-      <button
-        key={index}
-        className={`option ${selectedOption === index ? 'selected' : ''}`}
-        onClick={() => handleOptionClick(index)}
-      >
-        {option}
-      </button>
-    ));
-  };
+  
 
+  const renderOptions = () => {
+
+      return questions[currentQuestion].options.map((option, index) => (
+        <button
+          key={index}
+          className={`option ${selectedOption === index ? "selected" : ""}`}
+          onClick={() => handleOptionClick(index)}
+        >
+          {option}
+        </button>
+      ));
+    } ;
+
+  const isLastQuestion = currentQuestion === questions.length - 1;
   return (
     <div className="aptitude_container">
       <h1>{questions[currentQuestion].question}</h1>
       <div className="options-container">{renderOptions()}</div>
       
         <button className='aptitude_button' onClick={handleNextQuestion}>
-          Next
+
+        {isLastQuestion ? 'Submit' : 'Next'}
         </button>
      
       
