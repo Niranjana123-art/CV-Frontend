@@ -4,6 +4,7 @@
     min-height: 100vh;
     width: 100%;
     background: linear-gradient(129.93deg, #55AEC0 0.09%, #003D3E 0.1%, #003339 21.43%, #1F2221 68.35%);
+    background-image: url("../../assets/bg.png");
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +35,7 @@ margin-right: 5rem;
     font-weight: 200;
     text-align: center;
 }
-.aptitude_button{
+.aptitude_nxtbutton{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +43,7 @@ margin-right: 5rem;
     width: 8rem;
     height: 3rem;
     padding: 10px 20px;
-    background-color: #003A1E;
+    background-color: #007d40;
     color: #fff;
     font-size: 16px;
     font-weight: bold;
@@ -53,7 +54,7 @@ margin-right: 5rem;
 
     
 }
-.aptitude_button:hover {
+.aptitude_nxtbutton:hover {
     background-color: #0056b3;
     text-decoration: none;
   }
@@ -79,4 +80,39 @@ margin-right: 5rem;
     color: white;
   
   }
+  .option:active,
+  .option:focus{
+    background: #fff;
+    color: #003339;
+  }
+.aptitude__btns{
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  padding-top: 2rem;
+  
 
+}
+.aptitude_smtbutton{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 8rem;
+    height: 3rem;
+    padding: 10px 20px;
+    background-color: #007d40;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+}
+.aptitude_smtbutton:hover{
+  color:#ffffff;
+  background: #01592e;
+  
+}
