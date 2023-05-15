@@ -12,7 +12,9 @@ const PersonalityQ = () => {
     '',
     '',
     '',
-    ''
+    '',
+    '',
+    '',
   ];
 
   const handleSubmit = (event) => {
@@ -49,7 +51,7 @@ const PersonalityQ = () => {
                       <div>Strongly Disagree</div>
                     </div>
                 </div>
-                <div>
+                <div >
                   <button className='personalityQ_submit_btn' type="submit" onClick={handleModal}>Submit</button>
                 </div>
       </div>
