@@ -29,7 +29,7 @@ const PersonalityQ = () => {
         <div className='persolityq_container'>
 
                 <div className='questions_container'>
-                    <h3>How often do you seek out new experiences and sensations?</h3>
+                    <h1>How often do you seek out new experiences and sensations?</h1>
                     <div className='radio_container'>
                     {options.map((option, index) => (
                         <label className='radio_questions' key={index}>

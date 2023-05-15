@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+.aptitude_container{
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(129.93deg, #55AEC0 0.09%, #003D3E 0.1%, #003339 21.43%, #1F2221 68.35%);
+    background-image: url("../../assets/bg.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   z-index: 0;
+}
+
+.aptitude_container h1{
+    color: white;
+    padding-top: 3rem;
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 100;
+font-size: 2rem;
+text-align: center;
+margin-left: 5rem;
+margin-right: 5rem;
+}
+
+.options-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 200;
+    text-align: center;
+}
+.aptitude_nxtbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 8rem;
+    height: 3rem;
+    padding: 10px 20px;
+    background-color: #007d40;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    
+}
+.aptitude_nxtbutton:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+  }
+
+  .options-container {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    margin-top: 3rem;
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 30rem;
+    height: 3.5rem;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    margin-bottom: 10px;
+    background-color: transparent;
+    color: white;
+  
+  }
+  .option:active,
+  .option:focus{
+    background: #fff;
+    color: #003339;
+  }
+.aptitude__btns{
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  padding-top: 2rem;
+  
+
+}
+.aptitude_smtbutton{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 8rem;
+    height: 3rem;
+    padding: 10px 20px;
+    background-color: #007d40;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+}
+.aptitude_smtbutton:hover{
+  color:#ffffff;
+  background: #01592e;
+  
+}

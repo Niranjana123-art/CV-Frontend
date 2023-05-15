@@ -37,7 +37,7 @@
     border-radius: 10px;
     color: white;
     text-align: center;
-    padding: 5px;
+    padding: 3px;
 }
 .Additonal_info_content{
     padding-top: 2rem;
@@ -47,7 +47,7 @@ label{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 2rem;
     line-height: 18px;
     text-align: start;
     color: rgba(0, 0, 0, 0.5); 

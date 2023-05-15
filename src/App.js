@@ -16,6 +16,7 @@ import PersonalityScore from "./pages/PersonalityScore/PersonalityScore";
 import PersonalitySuccess from "./components/PersonalitySuccess/PersonalitySuccess";
 import PictureDisplay from "./pages/PictureDisplay/PictureDisplay";
 import PersonalityQ from "./components/PersonalityQ/PersonalityQ";
+import AptitudeQ from "./components/AptitudeQ/AptitudeQ";
 
 
 function App() {
@@ -38,6 +39,8 @@ function App() {
             <Route path="/aptitude-score" element={<AptitudeScore />} />
             <Route path="/pic-display" element={<PictureDisplay />} />
             <Route path="/personalityq" element={<PersonalityQ />} />
+            <Route path="/aptitudeq" element={<AptitudeQ />} />
+            
       </Routes>
       </BrowserRouter>
       </div>

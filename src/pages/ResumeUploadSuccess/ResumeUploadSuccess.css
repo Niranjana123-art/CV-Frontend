@@ -17,10 +17,13 @@
     align-content: center;
     align-items: center;
     flex-direction: column;
-    background: #D9D9D9;
+    background: #011A1C;
     background-size: cover;
     width:60rem;
     height:30rem;
+    color: #ffffff;
+    border-radius: 1rem;
+  
 
 }
 .resume__contents h2{
@@ -40,7 +43,7 @@
     font-family: 'Inter';
     border-radius: 0rem;
     font-size: 1.5rem;
-    background-color: #202322;
+    background-color: #003A1E;
     padding:1rem;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
