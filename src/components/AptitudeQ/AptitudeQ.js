@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './AptitudeQ.css';
+import AptitudeSuccess from "../AptitudeSucess/AptitudeSuccess"
 
 const questions = [
   {
@@ -41,37 +42,47 @@ function AptitudeQ() {
     console.log(selectedOption);
   };
 
-  const handleNextQuestion = () => {
-    // Check answer, provide feedback, and move to the next question
-    // Add your logic here
+  const[open,setOpen]=useState(false)
+  const handleModal=()=>{
+    setOpen(true)
+  }
 
-    // Move to the next question
+  const handleNextQuestion = () => {
+    
     setCurrentQuestion((prevQuestion) => prevQuestion + 1);
     setSelectedOption(null);
   };
 
-  const renderOptions = () => {
-    return questions[currentQuestion].options.map((option, index) => (
-      <button
-        key={index}
-        className={`option ${selectedOption === index ? 'selected' : ''}`}
-        onClick={() => handleOptionClick(index)}
-      >
-        {option}
-      </button>
-    ));
-  };
+  
 
+  const renderOptions = () => {
+
+      return questions[currentQuestion].options.map((option, index) => (
+        <button
+          key={index}
+          className={`option ${selectedOption === index ? "selected" : ""}`}
+          onClick={() => handleOptionClick(index)}
+        >
+          {option}
+        </button>
+      ));
+    } ;
+
+  const isLastQuestion = currentQuestion === questions.length - 1;
   return (
     <div className="aptitude_container">
       <h1>{questions[currentQuestion].question}</h1>
       <div className="options-container">{renderOptions()}</div>
-      
-        <button className='aptitude_button' onClick={handleNextQuestion}>
+        <div className='aptitude__btns'>
+        <button className='aptitude_nxtbutton' onClick={handleNextQuestion}>
           Next
         </button>
-     
-      
+        <button className='aptitude_smtbutton' type="submit" onClick={handleModal}>
+          Submit
+        </button>
+        </div>
+        <AptitudeSuccess open={open} setOpen={setOpen}/>
+
     </div>
   );
 }
