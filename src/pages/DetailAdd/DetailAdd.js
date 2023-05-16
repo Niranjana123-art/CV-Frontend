@@ -14,7 +14,8 @@ import axiosInstance from '../../auth/authHandler'
 
 const DetailAdd = () => {
   const navigate = useNavigate();
-  const [userid, setUserId] = useState(null);
+  // const [userid, setUserId] = useState(null);
+  const [name, setName] = useState('');
   const [dob, setDob] = useState('');
   const [location, setLocation] = useState('');
   const [gender, setGender] = useState('');
@@ -24,7 +25,7 @@ const DetailAdd = () => {
     // Fetch the related user object and set the user id state
     axiosInstance.get(`${baseUrl}/current-user/`)
       .then(response => {
-        setUserId(response.data.username);
+        // setUserId(response.data.username);
         setId(response.data.id);
       })
       .catch(error => {
@@ -36,16 +37,14 @@ const DetailAdd = () => {
     e.preventDefault();
     axiosInstance.post(`${baseUrl}/detail-add/`,
     {
-      name:userid,
+      name:name,
       dob: dob,
       location: location,
       gender: gender
   }).then((response)=>{
-    if(response.status===201){
-    toast.success("Message sent successfully!!!")
+    // toast.success("Message sent successfully!!!")
       navigate(`/detail-add2?id=${idval}`)
     //   window.location.reload();
-    }
   },(error)=>{
     console.log(error)
     toast.error('Something went wrong')
@@ -72,9 +71,9 @@ const DetailAdd = () => {
                 type="text"
                 id="name"
                 name="name"
-                value={userid}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 required
-                readOnly
               />
                     </label>
                     <hr/>
