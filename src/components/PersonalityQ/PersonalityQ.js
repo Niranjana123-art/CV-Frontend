@@ -3,7 +3,6 @@ import './PersonalityQ.css';
 import PersonalitySuccess from "../PersonalitySuccess/PersonalitySuccess"
 const PersonalityQ = () => {
   const [answer, setAnswer] = useState(null);
-
   const options = [
     '',
     '',

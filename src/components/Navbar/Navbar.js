@@ -41,6 +41,10 @@ function Navbar() {
   // };
   // const { profile, signOutOfGoogle, signInWithGoogle } =
     // useContext(UserContext);
+    // const handleDrawerOpen = () => {
+    //   setOpen(true);
+    // };
+  
   const handleDrawerClose = () => {
     setOpen(false);
   };
@@ -52,15 +56,15 @@ function Navbar() {
         <div className={"navbar__left"}>
           <div
             className={"navbar__menu_container"}
-            // onClick={() => {
-            //   setOpen(true);
-            // }}
+            onClick={() => {
+              setOpen(true);
+            }}
           >
             <HiMenuAlt2
               className={"navbar__menu"}
-              // onClick={() => {
-              //   setOpen(true);
-              // }}
+              onClick={() => {
+                setOpen(true);
+              }}
             />
           </div>
           <div
@@ -198,15 +202,17 @@ function Navbar() {
           </div>
         </div>
       </div>
+      <div>
       <Drawer
-        // open={open}
-        // onClose={(event, reason) => {
-        //   if (reason !== "backdropClick") {
-        //     handleDrawerClose();
-        //   } else if (reason !== "escapeKeyDown") {
-        //     handleDrawerClose();
-        //   }
-        // }}
+        open={open}
+        onClose={(event, reason) => {
+          if (reason !== "backdropClick") {
+            handleDrawerClose();
+          } 
+          else if (reason !== "escapeKeyDown") {
+            handleDrawerClose();
+          }
+        }}
         anchor="left"
       >
         <div className={styles.nav__drawer}>
@@ -250,7 +256,7 @@ function Navbar() {
               >
                 Posts
               </div>
-              <div className={styles.navbar__links_1}>
+              {/* <div className={styles.navbar__links_1}> */}
                 {/* {profile ? (
                   <>
                     <div
@@ -274,11 +280,13 @@ function Navbar() {
                     Sign In
                   </div>
                 )} */}
-              </div>
+              {/* </div> */}
             </div>
           </div>
         </div>
+      
       </Drawer>
+      </div>
     </>
   );
 }
