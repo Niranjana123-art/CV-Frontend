@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     background: linear-gradient(129.93deg, #55AEC0 0.09%, #003D3E 0.1%, #003339 21.43%, #1F2221 68.35%);
     background-image: url("../../assets/bg.png");
 
@@ -36,7 +36,7 @@
     align-items: center;
     width: 60%;
     padding-top: 3rem;
-    padding-left: 3.5rem;
+    padding-left: 7rem;
     
   }
   
@@ -52,28 +52,16 @@
   }
 
   input[type="radio"] {
-    -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+   
   width: 1.5rem;
   height: 1.5rem;
-  border: 3px solid #000000;
+  border: 2rem solid #000000;
   border-radius: 50%;
   outline: none;
   transition: all 0.2s ease-in-out;
-  /* margin-right: 2px; */
-  }
   
-/* .questions_container h3{
-    padding-top: 6rem;
-    font-family: 'Montserrat';
-font-style: normal;
-font-weight: 100;
-font-size: 50px;
-text-align: center;
-color: white;
-padding-left: 8rem;
-} */
+  }
+
 .radio_optLabel{
   display: flex;
   flex-direction: row;
@@ -84,6 +72,9 @@ padding-left: 8rem;
   font-size: 1.3rem;
   font-weight: 100;
 
+}
+.strongly__label{
+  padding-left: 5.5rem;
 }
 .personalityQ_submit_btn{
   display: flex;

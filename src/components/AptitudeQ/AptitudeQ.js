@@ -30,7 +30,7 @@ const questions = [
   }
 
 
-  // Add more questions
+  
 ];
 
 function AptitudeQ() {
