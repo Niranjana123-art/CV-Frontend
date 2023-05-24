@@ -32,6 +32,9 @@ const PersonalityQ = () => {
   const handleModal=()=>{
     setOpen(true)
   }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
@@ -60,7 +63,7 @@ const PersonalityQ = () => {
   };
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className='persolityq_container'>
         <div className='questions_container'>
           <h1>{questions[currentQuestion].question}</h1>
@@ -72,7 +75,7 @@ const PersonalityQ = () => {
         </div>
         <div>
         {currentQuestion === questions.length - 1 ? (
-          <button className="personalityQ_submit_btn" type="button" onClick={handleModal}>
+          <button className='personalityQ_submit_btn' type="submit" onClick={handleModal}>
             Submit
           </button>
         ) : (
@@ -81,8 +84,9 @@ const PersonalityQ = () => {
           </button>
         )}
         </div>
+        <PersonalitySuccess open={open} setOpen={setOpen}/>
       </div>
-      {open && <PersonalitySuccess />}
+     
     </form>
   );
 };
