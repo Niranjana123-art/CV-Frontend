@@ -8,6 +8,7 @@
     width: 100vw;
     background: linear-gradient(129.93deg, #55AEC0 0.09%, #003D3E 0.1%, #003339 21.43%, #1F2221 68.35%);
     background-image: url("../../assets/bg.png");
+    background-size: cover;
 
 }
 
@@ -37,7 +38,7 @@
     width: 60%;
     padding-top: 3rem;
     padding-left: 7rem;
-    
+    font-style: oblique;
   }
   
 .radio_container label {
@@ -74,7 +75,10 @@
 
 }
 .strongly__label{
-  padding-left: 5.5rem;
+  padding-left: 2rem;
+}
+.agree__label {
+  padding-right: 7rem;
 }
 .personalityQ_submit_btn{
   display: flex;

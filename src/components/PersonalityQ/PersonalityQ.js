@@ -1,34 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './PersonalityQ.css';
+import { baseUrl } from '../../utils/Urls';
+import axiosInstance from '../../auth/authHandler';
 import PersonalitySuccess from '../PersonalitySuccess/PersonalitySuccess';
+import { useNavigate } from 'react-router-dom';
 
 const questions = [
   {
     question: '1: How often do you seek out new experiences and sensations?',
-    options: ['', '', '', '', '', '', '', '', '', ''],
+    options: ['','' ,'' ,'' ,'' ,'' ,'' ,'' ],
   },
   {
     question: '2: How would you describe your level of extraversion?',
-    options: ['', '', '', '', '', '', '', '', '', ''],
+    options: ['', '', '', '', '', '', '', ''],
   },
   {
     question: '3: How do you handle stressful situations?',
-    options: ['', '', '', '', '', '', '', '', '', ''],
+    options: ['', '', '', '', '', '', '', ''],
   },
   {
     question: '4: Are you more inclined towards being organized or spontaneous?',
-    options: ['', '', '', '', '', '', '', '', '', ''],
+    options: ['', '', '', '', '', '', '', ''],
   },
   {
     question: '5: How do you make decisions?',
-    options: ['', '', '', '', '', '', '', '', '', ''],
+    options: ['', '', '', '', '', '', '', ''],
   },
 ];
 
 const PersonalityQ = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
-  const[open,setOpen]=useState(false)
+  const[open,setOpen]=useState(false);
+  const[idval,setId] = useState('');
+  const navigate = useNavigate();
+  useEffect(() => {
+    // Fetch the related user object and set the user id state
+    axiosInstance.get(`${baseUrl}/current-user/`)
+      .then(response => {
+        setId(response.data.id);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
   const handleModal=()=>{
     setOpen(true)
   }
@@ -69,8 +84,8 @@ const PersonalityQ = () => {
           <h1>{questions[currentQuestion].question}</h1>
           <div className='radio_container'>{renderOptions()}</div>
           <div className='radio_optLabel'>
-            <div className='strongly__label'>Strongly Agree</div>
-            <div>Strongly Disagree</div>
+            <div className='strongly__label'>Strongly Disagree</div>
+            <div className='agree__label'>Strongly Agree</div>
           </div>
         </div>
         <div>
