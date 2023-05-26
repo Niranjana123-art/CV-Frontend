@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 const questions = [
   {
     question: '1: How often do you seek out new experiences and sensations?',
-    options: ['','' ,'' ,'' ,'' ,'' ,'' ,'' ],
+    options: ['', '', '', '', '', '', '', ''],
   },
   {
     question: '2: How would you describe your level of extraversion?',
@@ -33,6 +33,10 @@ const PersonalityQ = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const[open,setOpen]=useState(false);
   const[idval,setId] = useState('');
+  const[personalityScores, setPersonalityScores] = useState([]);
+  const[name,setName]=useState('');
+  const[gender,setGender]=useState('');
+  const[age,setAge] = useState('');
   const navigate = useNavigate();
   useEffect(() => {
     // Fetch the related user object and set the user id state
@@ -45,14 +49,39 @@ const PersonalityQ = () => {
       });
   }, []);
   const handleModal=()=>{
-    setOpen(true)
+    const[openness,neuroticism,conscientiousness,agreeableness,extraversion] = personalityScores;
+    const requestBody = {
+      name:name,
+      Gender:gender,
+      Age:age,
+      openness:openness,
+      neuroticism:neuroticism,
+      conscientiousness:conscientiousness,
+      agreeableness:agreeableness,
+      extraversion:extraversion
+    };
+
+    axiosInstance.post(`${baseUrl}/training/predict/`,requestBody)
+    .then(response => {
+      console.log(response);
+    })
+    .catch(error => {
+      console.error(error);
+    });
+    setOpen(true);
   }
   const handleSubmit = (event) => {
     event.preventDefault();
   };
 
   const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
+    const selectedIndex = parseInt(event.target.value);
+    const selectedValue = selectedIndex + 1
+    console.log(selectedValue);
+    setSelectedOption(selectedValue);
+    const updatedScores = [...personalityScores];
+    updatedScores[currentQuestion] = selectedValue;
+    setPersonalityScores(updatedScores);
   };
 
   const handleNextQuestion = () => {
@@ -68,11 +97,11 @@ const PersonalityQ = () => {
         <input
           type='radio'
           name='answer'
-          value={option}
-          checked={selectedOption === option}
+          value={index}
+          checked={selectedOption === index+1}
           onChange={handleOptionChange}
         />
-        {option}
+         {option}
       </label>
     ));
   };
@@ -81,6 +110,40 @@ const PersonalityQ = () => {
     <form onSubmit={handleSubmit}>
       <div className='persolityq_container'>
         <div className='questions_container'>
+        {currentQuestion === 0 && (
+            <div className='details__add'>
+            <label htmlFor="name"> Name:
+                        <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+            </label>
+            <label htmlFor="name"> Gender:
+                        <input
+                    type="text"
+                    id="gender"
+                    name="gender"
+                    value={gender}
+                    onChange={(e) => setGender(e.target.value)}
+                    required
+                  />
+            </label>
+            <label htmlFor="name"> Age:
+                  <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    value={age}
+                    onChange={(e) => setAge(parseInt(e.target.value))}
+                    required
+                  />
+            </label>
+            </div>
+        )}
           <h1>{questions[currentQuestion].question}</h1>
           <div className='radio_container'>{renderOptions()}</div>
           <div className='radio_optLabel'>

@@ -32,7 +32,7 @@
     padding-top: 1rem; */
   }
   
-  input[type='checkbox'] {
+  .gender-selection-wrapper input[type='checkbox'] {
     appearance: none;
     width: 20px;
     height: 20px;
@@ -43,13 +43,13 @@
     margin-left: 12rem;
   }
   
-  input[type='checkbox']:checked {
+  .gender-selection-wrapper input[type='checkbox']:checked {
     background-color: #00393C;
     border-color: black;
     opacity: 0.75;
   }
   
-  input[type='checkbox']:checked::before {
+  .gender-selection-wrapper input[type='checkbox']:checked::before {
     content: '\2713';
     display: block;
     width: 12px;
@@ -61,7 +61,7 @@
     margin: 4px;
   }
 
- label{
+.gender-selection-wrapper label{
   font-family: 'Poppins';
     font-size: 20px;
     color:black;

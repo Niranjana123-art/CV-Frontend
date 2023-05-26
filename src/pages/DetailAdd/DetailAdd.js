@@ -68,13 +68,13 @@ const DetailAdd = () => {
                   <div className='input_detail'>
                     <label htmlFor="name"><FaUserAlt/> Name:
                     <input
-                type="text"
-                id="name"
-                name="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                    />
                     </label>
                     <hr/>
                       <label htmlFor="dob"><FaCalendarAlt/> D.O.B:
