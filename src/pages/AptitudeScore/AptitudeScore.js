@@ -10,7 +10,18 @@ import axiosInstance from '../../auth/authHandler';
 
 const AptitudeScore = () => {
   const [score, setScore] = useState(null);
+  const[idval,setId] = useState('');
   const navigate=useNavigate();
+  useEffect(() => {
+    // Fetch the related user object and set the user id state
+    axiosInstance.get(`${baseUrl}/current-user/`)
+      .then(response => {
+        setId(response.data.id);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
   
   
   useEffect(() => {
@@ -40,7 +51,7 @@ const AptitudeScore = () => {
                      <h2>You Scored {score} out of 5.</h2>
                 </div>
                 <div className='AptitudeScore_Button'>
-                     <button onClick={() => {navigate("/profile");}} type="submit">FINISH</button>
+                     <button onClick={() => {navigate(`/profile?id=${idval}`);}} type="submit">FINISH</button>
                 </div>
             </div>
     </div>

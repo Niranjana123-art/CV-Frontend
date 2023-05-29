@@ -138,7 +138,7 @@ function AptitudeQ() {
       )}
       {isLastQuestion && (
         <button className='aptitude_smtbutton' type="submit" onClick={() => {
-          navigate("/AptitudeSuccess");
+          navigate(`/AptitudeSuccess?id=${idval}`);
         }}>
           Submit
         </button>
