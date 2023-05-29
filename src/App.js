@@ -14,6 +14,7 @@ import Profile from "./pages/Profile/Profile";
 import GenderSelection from "./components/GenderSelection/GenderSelection";
 import PersonalityScore from "./pages/PersonalityScore/PersonalityScore";
 import PersonalitySuccess from "./components/PersonalitySuccess/PersonalitySuccess";
+import AptitudeSuccess from "./components/AptitudeSucess/AptitudeSuccess";
 import PictureDisplay from "./pages/PictureDisplay/PictureDisplay";
 import PersonalityQ from "./components/PersonalityQ/PersonalityQ";
 import AptitudeQ from "./components/AptitudeQ/AptitudeQ";
@@ -31,6 +32,7 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/resume-upload" element={<ResumeUploadSuccess />} />
             <Route path="/PersonalitySuccess" element={<PersonalitySuccess />} />
+            <Route path="/AptitudeSuccess" element={<AptitudeSuccess />} />
             <Route path="/detail-add1" element={<DetailAdd />} />
             <Route path="/detail-add2" element={<DetailAddTwo />} />
             <Route path="/rough" element={<GenderSelection />} />
