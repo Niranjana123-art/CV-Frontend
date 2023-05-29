@@ -2,11 +2,14 @@ import React from 'react'
 import { createPortal } from 'react-dom'
 import './AptitudeSuccess.css'
 import SvgImage from  '../../assets/bgmodal.svg'
+import { useNavigate } from 'react-router-dom';
+
 const  AptitudeSuccess = ({open,setOpen}) => {
- if (!open){
-    return null
- }
- 
+//  if (!open){
+//     return null
+//  }
+  const navigate=useNavigate();
+  
   return createPortal(
     <div className='AptitudeSuccess_Container'>
      
@@ -15,7 +18,9 @@ const  AptitudeSuccess = ({open,setOpen}) => {
            Aptitude Test <br/>Submitted <span style={{color:'green'}}>Successfully!</span>
          </div>
            <div>
-           <button onClick={()=> setOpen(false)} className='AptitudeSuccess_button'>View Score</button>
+           <button onClick={() => {
+             navigate("/aptitude-score");
+            }} className='AptitudeSuccess_button'>View Score</button>
            </div>
     </div>
   </div>,
