@@ -31,33 +31,34 @@
     align-items: center;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 27rem;
     height: 2rem;
     background: #202322;
     border-radius: 10px;
     color: white;
     text-align: center;
-    padding: 3px;
+    padding: 5px;
 }
 .Additonal_info_content{
     padding-top: 2rem;
     padding-bottom: 2rem;
-}
-label{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 18px;
-    text-align: start;
-    color: rgba(0, 0, 0, 0.5); 
 }
 .label_detail2{
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-input{
+.label_detail2 label{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 18px;
+    text-align: start;
+    color: rgba(0, 0, 0, 0.5); 
+}
+.label_detail2 input{
     font-size: 1.2rem;
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -100,7 +101,7 @@ input{
   }
 
 
-form {
+  .Additonal_info_content form {
     display: flex;
     flex-direction: column;
     align-items: center;

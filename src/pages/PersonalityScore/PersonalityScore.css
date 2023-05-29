@@ -7,7 +7,6 @@
     justify-content:center;
     width: 100vw;
     min-height: 100vh;
-    padding-top: 3rem;
     background: linear-gradient(129.93deg, #55AEC0 0.09%, #003D3E 0.1%, #003339 21.43%, #1F2221 68.35%);
 }
 .heading__content{
@@ -75,9 +74,25 @@
     font-size: 20px;
     border-radius: 15px;
     background-color: #003A3C;
-    width: 10rem;
+    width: 14rem;
     height: 3.4rem;
     border: none;
     cursor: pointer;
     color: #ffffff;
+}
+
+.result__display {
+    font-family: 'Poppins';
+    font-size: 2rem;
+    font-weight: 300;
+    color: #ffff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.label__display {
+    font-style: italic;
+    padding : 0 8px;
 }

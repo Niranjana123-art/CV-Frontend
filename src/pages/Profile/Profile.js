@@ -12,17 +12,18 @@ import PictureDisplay from '../../components/PictureDisplay/PictureDisplay';
 const Profile = () => {
   
   // const [candidateDetails, setCandidateDetails] = useState(null);
-  const [userid, setUserId] = useState(null);
+  // const [userid, setUserId] = useState(null);
   const [idval, setId] = useState('');
   
   // const [name1, setName] = useState();
   const [location1, setLocation] = useState();
+  const [name,setName] = useState();
 
   useEffect(() => {
     // Fetch the related user object and set the user id state
     axiosInstance.get(`${baseUrl}/current-user/`)
       .then(response => {
-        setUserId(response.data.username);
+        // setUserId(response.data.username);
         setId(response.data.id);
       })
       .catch(error => {
@@ -35,6 +36,7 @@ const Profile = () => {
     axiosInstance.get(`${baseUrl}/detail-add/${idval}`)
       .then(response => {
         setLocation(response.data.location);
+        setName(response.data.name);
 
         console.log(response.data)
       })
@@ -51,12 +53,12 @@ const Profile = () => {
     <div className='Profile_Container'>
           <div className='Profile_Content'>
                 <div className='Profile_background'>
-                  <img src={back} alt=''/>
+                  <img src={back} alt='' />
                 </div>
                 <div className='Profile_All'>
                     
                         <div className='Profile_Details'>
-                          <h1>{userid}</h1>
+                          <h1>{name}</h1>
                           <h2>{location1}</h2>
                         </div>
                       

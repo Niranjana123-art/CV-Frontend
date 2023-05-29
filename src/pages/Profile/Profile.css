@@ -10,16 +10,16 @@
     
     
 }
-.Profile_Background{
+.Profile_background{
     display:flex;
     justify-content: center;
     background-size: cover;
   
     
 }
-.Profile_Background img{
-    width:10rem;
-    height: 5rem;
+.Profile_background img{
+    width:100vw;
+    height: 35vh;
     
 }
 .Profile_Details{

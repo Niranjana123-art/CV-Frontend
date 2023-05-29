@@ -30,7 +30,7 @@
   align-items: center;
 }
 .navbar__links {
-  margin-left: 40em;
+  margin-left: 40rem;
   display: flex;
   gap: 5rem;
   justify-content: space-between;
