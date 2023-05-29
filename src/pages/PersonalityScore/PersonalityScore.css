@@ -9,17 +9,29 @@
     min-height: 100vh;
     background: linear-gradient(129.93deg, #55AEC0 0.09%, #003D3E 0.1%, #003339 21.43%, #1F2221 68.35%);
 }
-.heading__content{
+.heading__content h1{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
     padding-top: 3rem;
     font-family: 'Poppins';
-    font-size: 1rem;
-    font-weight: 500;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 700;
     color: rgb(197, 193, 193);
-    margin-left: 30rem;
+    /* margin-left: 30rem; */
 }
+.book-icon {
+    font-size: 2.5rem;
+    fill: #000000;
+}
+.user-icon {
+    font-size: 4rem;
+    color:#ffffff;
+    border-radius: 50%;
+    background-color: #003A3C;
+}
+
 .score__contents{
     display: flex;
     align-items:center;
@@ -36,22 +48,27 @@
     font-weight:300;
     font-size: 16px;
     gap: 1rem;
+    padding-top: 0.3rem;
     margin-bottom: 1rem;
     color:black;
 }
 .detail__contents{
+    display:flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Poppins';
     font-weight: bolder;
-    font-size: 16px;
-    margin-top: 1rem;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
 }
 .location__content{
     display:flex;
     justify-content: center;
+    align-items: center;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 1rem;
     margin-bottom: 1rem;
 }
 .PersonalityTest__score{

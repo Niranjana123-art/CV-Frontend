@@ -18,6 +18,7 @@ const Profile = () => {
   // const [name1, setName] = useState();
   const [location1, setLocation] = useState();
   const [name,setName] = useState();
+  const [label,setLabel] = useState();
 
   useEffect(() => {
     // Fetch the related user object and set the user id state
@@ -30,6 +31,17 @@ const Profile = () => {
         console.log(error);
       });
   }, []);
+  useEffect(() => {
+    // make a GET request to the backend to retrieve candidate details
+    axiosInstance.get(`${baseUrl}/training/predict/${idval}`)
+      .then(response => {
+        setLabel(response.data.Label);
+        console.log(response.data)
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, [idval]);
 
   useEffect(() => {
     // make a GET request to the backend to retrieve candidate details
@@ -60,6 +72,7 @@ const Profile = () => {
                         <div className='Profile_Details'>
                           <h1>{name}</h1>
                           <h2>{location1}</h2>
+                          <h3>Personality Label : <span>{label}</span></h3>
                         </div>
                       
                           <div className='Profile_pic'>

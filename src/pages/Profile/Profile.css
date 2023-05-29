@@ -43,10 +43,16 @@
 }
 .Profile_Details h3{
     font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
+    font-style:normal;
+    font-weight:bolder;
+    font-size: 15px;
     line-height: 18px;
+    color: black;
+    padding-top: 2px;
+}
+.Profile_Details span {
+    font-style: normal;
+    font-weight: normal;
     color: #4AA9BC;
 }
 .Profile_All{

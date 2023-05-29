@@ -113,7 +113,7 @@ const PersonalityQ = () => {
         {currentQuestion === 0 && (
             <div className='details__add'>
             <label htmlFor="name"> Name:
-                        <input
+                  <input
                     type="text"
                     id="name"
                     name="name"
@@ -123,7 +123,7 @@ const PersonalityQ = () => {
                   />
             </label>
             <label htmlFor="name"> Gender:
-                        <input
+                  <input
                     type="text"
                     id="gender"
                     name="gender"

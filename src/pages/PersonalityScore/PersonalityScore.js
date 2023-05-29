@@ -3,11 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import { baseUrl } from '../../utils/Urls';
 import axiosInstance from '../../auth/authHandler';
 import './PersonalityScore.css'
-import {FaBookOpen} from "react-icons/fa";
 import {FaUserCircle} from "react-icons/fa";
+import { LuBookOpen } from "react-icons/lu";
+import { IconContext } from 'react-icons/lib';
 
 const PersonalityScore = () => {
    const[idval,setId] = useState('');
+   const[location,setLocation] = useState();
+   const[name,setName] = useState();
+   const[label,setLabel] = useState();
   const navigate = useNavigate();
   useEffect(() => {
     // Fetch the related user object and set the user id state
@@ -19,6 +23,30 @@ const PersonalityScore = () => {
         console.log(error);
       });
   }, []);
+  useEffect(() => {
+    // make a GET request to the backend to retrieve candidate details
+    axiosInstance.get(`${baseUrl}/detail-add/${idval}`)
+      .then(response => {
+        setLocation(response.data.location);
+        setName(response.data.name);
+
+        console.log(response.data)
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, [idval]);
+  useEffect(() => {
+    // make a GET request to the backend to retrieve candidate details
+    axiosInstance.get(`${baseUrl}/training/predict/${idval}`)
+      .then(response => {
+        setLabel(response.data.Label);
+        console.log(response.data)
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, [idval]);
   const handleChange = () => {
    navigate(`/aptitudeq?id=${idval}`);
   }
@@ -26,12 +54,16 @@ const PersonalityScore = () => {
     <div className='personality-score__container'>
             <div className='heading__content'><h1>Personality Test Score</h1></div>
             <div className='score__contents'>
-                <FaBookOpen border='black' color='white' size='2.1rem'/>
+            <IconContext.Provider value={{ className: "book-icon"}}>  
+              <LuBookOpen/>
+            </IconContext.Provider>  
                 <p className='line__content'>What we received from you</p>
-                <FaUserCircle size='4rem' color='#1d222b' />
-                <div className='detail__contents'>
-                    <p>Niranjana B Nair</p>
-                    <p className='location__content'>Kerala,India</p>
+                <IconContext.Provider value={{ className: "user-icon"}}>
+                  <FaUserCircle />
+                </IconContext.Provider>
+                <div>
+                    <p className='detail__contents'>{name}</p>
+                    <p className='location__content'>{location}</p>
                 </div>
                 <div className='PersonalityTest__score'>
                 <hr
@@ -47,7 +79,7 @@ const PersonalityScore = () => {
                         }}
                      />
                   <div className='result__display'>
-                     You are a <span className='label__display'> dependable </span> person
+                     Personality Label : <span className='label__display'> {label} </span>
                   </div>
                 </div>
                 <button onClick={handleChange}>
