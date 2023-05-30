@@ -4,7 +4,7 @@ import { baseUrl } from '../../utils/Urls';
 import axiosInstance from '../../auth/authHandler';
 import './PersonalityScore.css'
 import {FaUserCircle} from "react-icons/fa";
-import { LuBookOpen } from "react-icons/lu";
+import { BsBook } from "react-icons/bs";
 import { IconContext } from 'react-icons/lib';
 
 const PersonalityScore = () => {
@@ -55,7 +55,7 @@ const PersonalityScore = () => {
             <div className='heading__content'><h1>Personality Test Score</h1></div>
             <div className='score__contents'>
             <IconContext.Provider value={{ className: "book-icon"}}>  
-              <LuBookOpen/>
+              <BsBook/>
             </IconContext.Provider>  
                 <p className='line__content'>What we received from you</p>
                 <IconContext.Provider value={{ className: "user-icon"}}>
